@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\avatar-dead.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\avatar-dead.xnb</Output>
       <Time>2013-03-17T18:18:57.4055721+02:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\avatar-green.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\avatar-green.xnb</Output>
       <Time>2013-03-17T18:18:57.4155721+02:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\avatar-red.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\avatar-red.xnb</Output>
       <Time>2013-03-17T18:18:57.4155721+02:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\avatar-white.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\avatar-white.xnb</Output>
       <Time>2013-03-17T18:18:57.4055721+02:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\A.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\A.xnb</Output>
       <Time>2013-03-17T18:19:55.0856529+02:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\B.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\B.xnb</Output>
       <Time>2013-03-17T18:19:55.0856529+02:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\C.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\C.xnb</Output>
       <Time>2013-03-17T18:19:55.0856529+02:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\cursor2.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\cursor2.xnb</Output>
       <Time>2013-03-17T18:19:55.0956529+02:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\D.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\D.xnb</Output>
       <Time>2013-03-17T18:19:55.0956529+02:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\E.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\E.xnb</Output>
       <Time>2013-03-17T18:19:55.0956529+02:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\exit.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\exit.xnb</Output>
       <Time>2013-03-17T18:19:55.0956529+02:00</Time>
     </Item>
     <Item>
@@ -106,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\F.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\F.xnb</Output>
       <Time>2013-03-17T18:19:55.0956529+02:00</Time>
     </Item>
     <Item>
@@ -115,7 +115,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\G.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\G.xnb</Output>
       <Time>2013-03-17T18:19:55.1056529+02:00</Time>
     </Item>
     <Item>
@@ -124,7 +124,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\H.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\H.xnb</Output>
       <Time>2013-03-17T18:19:55.1056529+02:00</Time>
     </Item>
     <Item>
@@ -133,7 +133,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\I.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\I.xnb</Output>
       <Time>2013-03-17T18:19:55.1056529+02:00</Time>
     </Item>
     <Item>
@@ -142,7 +142,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\J.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\J.xnb</Output>
       <Time>2013-03-17T18:19:55.1056529+02:00</Time>
     </Item>
     <Item>
@@ -151,7 +151,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\K.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\K.xnb</Output>
       <Time>2013-03-17T18:19:55.1056529+02:00</Time>
     </Item>
     <Item>
@@ -160,7 +160,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\L.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\L.xnb</Output>
       <Time>2013-03-17T18:19:55.1056529+02:00</Time>
     </Item>
     <Item>
@@ -169,7 +169,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\M.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\M.xnb</Output>
       <Time>2013-03-17T18:19:55.1056529+02:00</Time>
     </Item>
     <Item>
@@ -178,7 +178,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\N.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\N.xnb</Output>
       <Time>2013-03-17T18:19:55.1056529+02:00</Time>
     </Item>
     <Item>
@@ -187,7 +187,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\next.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\next.xnb</Output>
       <Time>2013-03-17T18:19:55.1056529+02:00</Time>
     </Item>
     <Item>
@@ -196,7 +196,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\O.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\O.xnb</Output>
       <Time>2013-03-17T18:19:55.165653+02:00</Time>
     </Item>
     <Item>
@@ -205,7 +205,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\OK.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\OK.xnb</Output>
       <Time>2013-03-17T18:19:55.165653+02:00</Time>
     </Item>
     <Item>
@@ -214,7 +214,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\P.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\P.xnb</Output>
       <Time>2013-03-17T18:19:55.185653+02:00</Time>
     </Item>
     <Item>
@@ -223,7 +223,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\Q.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\Q.xnb</Output>
       <Time>2013-03-17T18:19:55.185653+02:00</Time>
     </Item>
     <Item>
@@ -232,7 +232,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\R.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\R.xnb</Output>
       <Time>2013-03-17T18:19:55.2556531+02:00</Time>
     </Item>
     <Item>
@@ -241,7 +241,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\S.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\S.xnb</Output>
       <Time>2013-03-17T18:19:55.2856531+02:00</Time>
     </Item>
     <Item>
@@ -250,7 +250,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\T.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\T.xnb</Output>
       <Time>2013-03-17T18:19:55.2956532+02:00</Time>
     </Item>
     <Item>
@@ -259,7 +259,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\U.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\U.xnb</Output>
       <Time>2013-03-17T18:19:55.3956533+02:00</Time>
     </Item>
     <Item>
@@ -268,7 +268,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\V.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\V.xnb</Output>
       <Time>2013-03-17T18:19:55.3956533+02:00</Time>
     </Item>
     <Item>
@@ -277,7 +277,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\W.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\W.xnb</Output>
       <Time>2013-03-17T18:19:55.4556534+02:00</Time>
     </Item>
     <Item>
@@ -286,7 +286,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\X.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\X.xnb</Output>
       <Time>2013-03-17T18:19:55.4656534+02:00</Time>
     </Item>
     <Item>
@@ -295,7 +295,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\Y.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\Y.xnb</Output>
       <Time>2013-03-17T18:19:55.4656534+02:00</Time>
     </Item>
     <Item>
@@ -304,7 +304,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\Z.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\Z.xnb</Output>
       <Time>2013-03-17T18:19:55.0856529+02:00</Time>
     </Item>
     <Item>
@@ -313,7 +313,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\black.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\black.xnb</Output>
       <Time>2013-04-08T09:28:48.6939232+02:00</Time>
     </Item>
     <Item>
@@ -322,17 +322,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\GUC.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\GUC.xnb</Output>
       <Time>2013-04-08T09:28:48.6789223+02:00</Time>
-    </Item>
-    <Item>
-      <Source>SpriteFont1.spritefont</Source>
-      <Name>SpriteFont1</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2013-04-08T09:38:01.099519+02:00</Time>
     </Item>
     <Item>
       <Source>Textures\cursor2.png</Source>
@@ -340,7 +331,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\cursor2.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\cursor2.xnb</Output>
       <Time>2013-04-08T09:39:12.3565946+02:00</Time>
     </Item>
     <Item>
@@ -349,8 +340,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\gradientTexture.xnb</Output>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\gradientTexture.xnb</Output>
       <Time>2013-04-08T09:40:35.2273346+02:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2013-04-15T15:11:19.6454338+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -358,10 +358,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControlContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControlContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\user\Documents\Visual Studio 2010\Projects\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControlContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControlContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

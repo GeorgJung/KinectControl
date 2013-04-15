@@ -34,6 +34,6 @@ Content\Buttons\Y.xnb
 Content\Buttons\Z.xnb
 Content\Textures\black.xnb
 Content\Textures\GUC.xnb
-Content\SpriteFont1.xnb
 Content\Textures\cursor2.xnb
 Content\Textures\gradientTexture.xnb
+Content\SpriteFont1.xnb
