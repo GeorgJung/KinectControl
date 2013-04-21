@@ -88,3 +88,5 @@ C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\Ki
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\KinectControl.exe
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\KinectControl.pdb
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\Interop.SpeechLib.dll
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\KinectControl.csproj.ResolveComReference.cache
