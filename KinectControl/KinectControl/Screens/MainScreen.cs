@@ -16,10 +16,9 @@ namespace KinectControl.Screens
         private SpriteBatch spriteBatch;
         private SpriteFont font;
         private Kinect kinect;
-        private HandCursor Hand;
         private SkeletonAnalyzer analyzer;
         private string text;
-        double angle = 0;
+        double angle;
         private GraphicsDevice graphics;
         private int screenWidth,screenHeight;
         private Button button;
@@ -34,6 +33,8 @@ namespace KinectControl.Screens
 
         public override void Initialize()
         {
+            text = "0";
+            angle = 0;
             showAvatar = true;
             button = new Button();
             hand = new HandCursor();
@@ -69,8 +70,10 @@ namespace KinectControl.Screens
             hand.Update(gameTime);
             button.Update(gameTime);
             if (!(ScreenManager.Kinect.trackedSkeleton == null))
+            {
                 angle = analyzer.GetBodySegmentAngle(ScreenManager.Kinect.trackedSkeleton.Joints);
-            text = "" + angle;
+                text += angle;
+            }
             FreezeScreen();
             base.Update(gameTime);
         }
