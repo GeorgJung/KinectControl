@@ -10,8 +10,23 @@ The kinect sensor contains of an infrared projector, a LED light indicator, a co
 The camera has an angular field of view of 57 degrees horizontally and 43 degrees vertically.
 The connection between the arduino uno board and the kinect sensor is done through a USB-Serial communication.
 
-  \includegraphics[scale=2]{KinectSensor.jpg}
-  \includegraphics[scale=2]{KinectDataStream.png}
+See \Figref{fig:kinectsensor} (see \figref{fig:kinectsensor})
+
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=.5\linewidth]{KinectSensor.jpg}
+  \caption{Kinect sensor}
+  \label{fig:kinectsensor}
+\end{figure}
+  
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=1.0\linewidth]{KinectDataStream.png}
+  \caption{Data stream}
+  \label{fig:datastream}
+\end{figure}
+  
 
 \subsection{Skeletal Tracking}
 
@@ -28,15 +43,15 @@ There's many ways you could build a gesture recognition system using the kinect 
 You can divide the gesture into smaller gesture parts/segments if needed and check if they succeed in each frame according to their topological order in a certain number of frames then the gesture succeeds.
 In this project, the gesture recognition system does all of the above except image proccessing as there was no gesture recording software compatible with the microsoft sdk found.
 
-\includegraphics[scale=2]{GestureArchitecture1.png}
-\includegraphics[scale=2]{GestureArchitecture2.png}
+\includegraphics[width=1.0\linewidth]{GestureArchitecture1.png}
+\includegraphics[width=1.0\linewidth]{GestureArchitecture2.png}
 
 \section{Arduino}
 
 The Arduino Uno is a microcontroller board based on the ATmega328 . It has 14 digital input/output pins of which 6 can be used as PWM outputs, 6 analog inputs, a 16 MHz ceramic resonator, a USB connection, a power jack, an ICSP header, and a reset button.
 The power pins are as follows:
 The ATmega328 has a 32 KB memory (with 0.5 KB used for the bootloader). It also has 2 KB of SRAM and 1 KB of EEPROM.
-\includegraphics[scale=2]{ArduinoUNOboard.jpg}
+\includegraphics[scale=2]{ArduinoUNOBoard.jpg}
 
 \subsection{Kinect-Arduino-HomeDevice physical Connection}
 
@@ -46,29 +61,31 @@ The connection between the arduino and the home devices is made through an elect
 
 \section{User Stories}
 
-\begin{itemsize}
-
 The user stories and the program features are as follows:
-\box
-\item[\tiny{$\blacksquare$}] As a user, I can turn the lights on/off by entering/leaving the room.
-\item[\tiny{$\blacksquare$}] As a system, I should be able to recognize certain gestures and control the device accordingly.
-\item[\tiny{$\blacksquare$}] As a user, I can interact with a touchless interface.
-\item[\tiny{$\blacksquare$}] As a system, I should recognize the user's face and keep track of it.
-\item[\tiny{$\blacksquare$}] As a user, I can give certain voice commands.
-\item[\tiny{$\blacksquare$}] As a system, I should have a circuit connection between the arduino board and the device I want to control.
-\item[\tiny{$\blacksquare$}] As a system, I should be able to control the device and switch it on/off when needed.
-\item[\tiny{$\blacksquare$}] As a system, I should create an interface to allow the communication between the kinect sensor and arduino board.
-\item[\tiny{$\blacksquare$}] As  a user, I should see pop-up screens to show feedback from the interface at certain circumstances.
-\item[\tiny{$\blacksquare$}] As a user, I should see an avatar which represents my distance to the kinect.
-\item[\tiny{$\blacksquare$}] As a user, I should see an introductory fading screen to the application.
-\item[\tiny{$\blacksquare$}] As a user, I can play music.
-\item[\tiny{$\blacksquare$}] As a user, I should see a main screen where I can edit settings and enable/disable features like face/depth/voice/skeletal tracking.
-\item[\tiny{$\blacksquare$}] As a user, I should see a screen for each controlled device where I can edit it's settings manually.
-\item[\tiny{$\blacksquare$}] As a system I should provide a way for the user to enter a password to be able to manage the application.
-
-\end{itemsize}
+\begin{itemize}
+\item As a user, I can turn the lights on/off by entering/leaving the room.
+\item As a system, I should be able to recognize certain gestures and control the device accordingly.
+\item As a user, I can interact with a touchless interface.
+\item As a system, I should recognize the user's face and keep track of it.
+\item As a user, I can give certain voice commands.
+\item As a system, I should have a circuit connection between the arduino board and the device I want to control.
+\item As a system, I should be able to control the device and switch it on/off when needed.
+\item As a system, I should create an interface to allow the communication between the kinect sensor and arduino board.
+\item As  a user, I should see pop-up screens to show feedback from the interface at certain circumstances.
+\item As a user, I should see an avatar which represents my distance to the kinect.
+\item As a user, I should see an introductory fading screen to the application.
+\item As a user, I can play music.
+\item As a user, I should see a main screen where I can edit settings and enable/disable features like face/depth/voice/skeletal tracking.
+\item As a user, I should see a screen for each controlled device where I can edit it's settings manually.
+\item As a system I should provide a way for the user to enter a password to be able to manage the application.
+\end{itemize}
 
 \section{Software Architecture}
 
 The software architecture of the project is shown in the figures below
-\includegraphics[scale=2]{SoftwareArchitecture.png}
+\includegraphics[width=0.8\linewidth]{SoftwareArchitecture}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../Thesis"
+%%% End: 
