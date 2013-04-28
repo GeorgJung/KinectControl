@@ -29,6 +29,7 @@ namespace KinectControl.Common
     public enum GestureType
     {
         None,
-        
-        }
+        WaveLeft,
+        PunchGesture,
+    }
 }

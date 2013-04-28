@@ -27,7 +27,7 @@ namespace KinectControl.UI
             : base(game)
         {
             this.Kinect = kinect;
-        
+            
             base.Initialize();
 
         }

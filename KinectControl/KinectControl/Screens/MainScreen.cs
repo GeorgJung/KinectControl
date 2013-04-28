@@ -18,6 +18,7 @@ namespace KinectControl.Screens
         private Kinect kinect;
         private SkeletonAnalyzer analyzer;
         private string text;
+        private string gesture;
         double angle;
         private GraphicsDevice graphics;
         private int screenWidth,screenHeight;
@@ -41,7 +42,7 @@ namespace KinectControl.Screens
             hand.Initialize(ScreenManager.Kinect);
             analyzer = new SkeletonAnalyzer();
             if (!(ScreenManager.Kinect.trackedSkeleton == null))
-                analyzer.SetBodySegments(ScreenManager.Kinect.trackedSkeleton.Joints[JointType.HipLeft], ScreenManager.Kinect.trackedSkeleton.Joints[JointType.HipCenter], ScreenManager.Kinect.trackedSkeleton.Joints[JointType.HipRight]);
+                analyzer.SetBodySegments(ScreenManager.Kinect.trackedSkeleton.Joints[JointType.HandRight], ScreenManager.Kinect.trackedSkeleton.Joints[JointType.ElbowRight], ScreenManager.Kinect.trackedSkeleton.Joints[JointType.ShoulderRight]);
             button.Initialize("Buttons/OK", this.ScreenManager.Kinect, new Vector2(820, 100));
             button.Clicked += new Button.ClickedEventHandler(button_Clicked);
             base.Initialize();
@@ -53,12 +54,13 @@ namespace KinectControl.Screens
         }
         public override void LoadContent()
         {
+            kinect = ScreenManager.Kinect;
+            gesture = kinect.Gesture;
             content = ScreenManager.Game.Content;
             graphics = ScreenManager.GraphicsDevice;
             spriteBatch = ScreenManager.SpriteBatch;
             screenHeight = graphics.Viewport.Height;
             screenWidth = graphics.Viewport.Width;
-            kinect = ScreenManager.Kinect;
             gradientTexture = content.Load<Texture2D>("Textures/gradientTexture");
             font = content.Load<SpriteFont>("SpriteFont1");
             hand.LoadContent(content);
@@ -69,6 +71,7 @@ namespace KinectControl.Screens
         {
             hand.Update(gameTime);
             button.Update(gameTime);
+            gesture = kinect.Gesture;
             if (!(ScreenManager.Kinect.trackedSkeleton == null))
             {
                 angle = analyzer.GetBodySegmentAngle(ScreenManager.Kinect.trackedSkeleton.Joints);
@@ -85,6 +88,7 @@ namespace KinectControl.Screens
             spriteBatch.Begin();
             spriteBatch.Draw(gradientTexture, new Rectangle(0, 0, 1280, 720), Color.White);
             spriteBatch.DrawString(font, text, Vector2.Zero, Color.Orange);
+            spriteBatch.DrawString(font, gesture, new Vector2(500,500), Color.Orange);
             button.Draw(spriteBatch);
             hand.Draw(spriteBatch);
             spriteBatch.End();

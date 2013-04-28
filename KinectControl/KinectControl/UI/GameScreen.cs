@@ -1,4 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
+using Mechanect.Common;
+using System.Threading;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Content;
 
 namespace KinectControl.UI
 {
@@ -19,8 +23,12 @@ namespace KinectControl.UI
     /// </summary>
     public abstract class GameScreen
     {
+        private ContentManager content;
+        private SpriteBatch spriteBatch;
+        private SpriteFont font;
         private int frameNumber;
         public UserAvatar userAvatar;
+        public VoiceCommands voiceCommands;
         public bool IsFrozen
         {
             get
@@ -53,6 +61,7 @@ namespace KinectControl.UI
         public bool enablePause = false;
         public bool showAvatar = true;
         public bool screenPaused;
+        private string commands;
 
         /// <summary>
         /// LoadContent will be called only once before drawing and it's the place to load
@@ -60,6 +69,9 @@ namespace KinectControl.UI
         /// </summary>
         public virtual void LoadContent()
         {
+            content = ScreenManager.Game.Content;
+            spriteBatch = ScreenManager.SpriteBatch;
+            font = content.Load<SpriteFont>("SpriteFont1");
             if (showAvatar)
             {
                 userAvatar = new UserAvatar(ScreenManager.Kinect, ScreenManager.Game.Content, ScreenManager.GraphicsDevice, ScreenManager.SpriteBatch);
@@ -72,7 +84,10 @@ namespace KinectControl.UI
         /// </summary
         public virtual void Initialize()
         {
-
+            commands = "red,yellow,go,adeek";
+            voiceCommands = new VoiceCommands(ScreenManager.Kinect.nui, commands);
+            var voiceThread = new Thread(voiceCommands.StartAudioStream);
+            voiceThread.Start();
         }
 
         /// <summary>
@@ -128,6 +143,9 @@ namespace KinectControl.UI
         {
             if (showAvatar)
                 userAvatar.Draw(gameTime);
+            spriteBatch.Begin();
+            spriteBatch.DrawString(font, voiceCommands.heardString, new Vector2(300,300), Color.Orange);
+            spriteBatch.End();
         }
 
         public void FreezeScreen()

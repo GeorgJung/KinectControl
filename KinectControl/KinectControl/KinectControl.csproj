@@ -98,6 +98,9 @@
     <Reference Include="System">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml">
       <Private>False</Private>
     </Reference>
@@ -112,6 +115,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CommunicationManager.cs" />
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\Gesture.cs" />
     <Compile Include="Common\GestureController.cs" />
@@ -119,7 +123,9 @@
     <Compile Include="Common\GestureEventArgs.cs" />
     <Compile Include="Common\IRelativeGestureSegment.cs" />
     <Compile Include="Common\Kinect.cs" />
+    <Compile Include="Common\PunchGesture.cs" />
     <Compile Include="Common\VoiceCommands.cs" />
+    <Compile Include="Common\WaveGesture.cs" />
     <Compile Include="Screens\FadingScreen.cs" />
     <Compile Include="Screens\IntroScreen.cs" />
     <Compile Include="Screens\MainScreen.cs" />
@@ -172,9 +178,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Devices\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--

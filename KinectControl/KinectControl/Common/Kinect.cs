@@ -41,7 +41,7 @@ namespace KinectControl.Common
         #endregion
 
         private Skeleton[] skeletons;
-        private KinectSensor nui;
+        public KinectSensor nui;
 
         //Tracked Skeleton
         public Skeleton trackedSkeleton;
@@ -67,6 +67,7 @@ namespace KinectControl.Common
         /// </summary>
         private void InitializeNui()
         {
+            _gesture = "";
             var index = 0;
             while (this.nui == null && index < KinectSensor.KinectSensors.Count)
             {
@@ -91,8 +92,8 @@ namespace KinectControl.Common
             { return; }
             this.nui.SkeletonFrameReady += this.OnSkeletonFrameReady;
             gestureController = new GestureController();
-            gestureController.GestureRecognized += OnGestureRecognized;
             InitializeGestures();
+            gestureController.GestureRecognized += OnGestureRecognized;
         }
 
         /// <summary>
@@ -154,14 +155,16 @@ namespace KinectControl.Common
         {
             Debug.WriteLine(e.GestureType);
 
-            /*switch (e.GestureType)
+            switch (e.GestureType)
             {
-                case GestureType.BendGesture:
-                    Gesture = "BendGesture";
-                    Constants.isBending = true;
+                case GestureType.WaveLeft:
+                    Gesture = "WaveLeft";
+                    break;
+                case GestureType.PunchGesture:
+                    Gesture = "PunchGesture";
                     break;
             }
-             */
+             
         }
 
         public static List<double> Fill_Joint_Pos(Skeleton skeleton, Joint joint, string dimension)
@@ -262,31 +265,18 @@ namespace KinectControl.Common
         }
         public void InitializeGestures()
         {
-            /*IRelativeGestureSegment[] StepRightSegments = new IRelativeGestureSegment[1];
-            StepRightGesture1 stepRightGesture1 = new StepRightGesture1();
-            StepRightSegments[0] = stepRightGesture1;
-            this.gestureController.AddGesture(GestureType.StepRightGesture, StepRightSegments);
-            IRelativeGestureSegment[] BendSegments = new IRelativeGestureSegment[1];
-            BendGesture1 bendGesture1 = new BendGesture1();
-            BendSegments[0] = bendGesture1;
-            this.gestureController.AddGesture(GestureType.BendGesture, BendSegments);
+            IRelativeGestureSegment[] waveLeftSegments = new IRelativeGestureSegment[4];
+            WaveLeftSegment1 waveLeftSegment1 = new WaveLeftSegment1();
+            WaveLeftSegment2 waveLeftSegment2 = new WaveLeftSegment2();
+            waveLeftSegments[0] = waveLeftSegment1;
+            waveLeftSegments[1] = waveLeftSegment2;
+            waveLeftSegments[2] = waveLeftSegment1;
+            waveLeftSegments[3] = waveLeftSegment2;
+            this.gestureController.AddGesture(GestureType.WaveLeft, waveLeftSegments);
             IRelativeGestureSegment[] PunchSegments = new IRelativeGestureSegment[1];
             PunchGesture1 punchGesture1 = new PunchGesture1();
             PunchSegments[0] = punchGesture1;
             this.gestureController.AddGesture(GestureType.PunchGesture, PunchSegments);
-            IRelativeGestureSegment[] DumbbellSegments = new IRelativeGestureSegment[2];
-            DumbbellGesture1 dumbbellGesture1 = new DumbbellGesture1();
-            DumbbellGesture2 dumbbellGesture2 = new DumbbellGesture2();
-            DumbbellSegments[0] = dumbbellGesture1;
-            DumbbellSegments[1] = dumbbellGesture2;
-            this.gestureController.AddGesture(GestureType.DumbbellGesture, DumbbellSegments);
-            IRelativeGestureSegment[] RunningSegments = new IRelativeGestureSegment[2];
-            RunningGesture1 runningGesture1 = new RunningGesture1();
-            RunningGesture2 runningGesture2 = new RunningGesture2();
-            RunningSegments[0] = runningGesture1;
-            RunningSegments[1] = runningGesture2;
-            this.gestureController.AddGesture(GestureType.RunningGesture, RunningSegments);
-            */
         }
 
         

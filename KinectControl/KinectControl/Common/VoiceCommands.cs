@@ -10,12 +10,11 @@ namespace Mechanect.Common
 {
     public class VoiceCommands
     {
-
         KinectAudioSource kinectAudio;
         SpeechRecognitionEngine speechRecognitionEngine;
         Stream stream;
         readonly KinectSensor kinect;
-        string heardString = " ";
+        public string heardString = "btengan";
 
         public VoiceCommands(KinectSensor kinect, string commands)
         {
