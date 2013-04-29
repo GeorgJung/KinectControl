@@ -352,6 +352,26 @@
       <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
       <Time>2013-04-15T15:11:19.6454338+02:00</Time>
     </Item>
+    <Item>
+      <Source>Audio\song.mp3</Source>
+      <Name>Audio\song</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song.xnb</Output>
+      <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song.wma</Extra>
+      <Time>2013-04-29T12:05:43.4886392+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\song2.mp3</Source>
+      <Name>Audio\song2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song2.xnb</Output>
+      <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song2.wma</Extra>
+      <Time>2013-04-29T12:05:43.5586393+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

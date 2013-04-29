@@ -3,6 +3,7 @@ using Mechanect.Common;
 using System.Threading;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Media;
 
 namespace KinectControl.UI
 {
@@ -29,6 +30,12 @@ namespace KinectControl.UI
         private int frameNumber;
         public UserAvatar userAvatar;
         public VoiceCommands voiceCommands;
+        //Array of Background songs.
+        public Song[] songs;
+
+        //Index of current song.
+        public int playQueue;
+
         public bool IsFrozen
         {
             get
@@ -72,6 +79,10 @@ namespace KinectControl.UI
             content = ScreenManager.Game.Content;
             spriteBatch = ScreenManager.SpriteBatch;
             font = content.Load<SpriteFont>("SpriteFont1");
+            songs[0] = content.Load<Song>("Audio\\song");
+            songs[1] = content.Load<Song>("Audio\\song2");
+            //songs[2] = Content.Load<Song>("Directory\\songtitle");
+            MediaPlayer.IsRepeating = false;
             if (showAvatar)
             {
                 userAvatar = new UserAvatar(ScreenManager.Kinect, ScreenManager.Game.Content, ScreenManager.GraphicsDevice, ScreenManager.SpriteBatch);
@@ -84,10 +95,12 @@ namespace KinectControl.UI
         /// </summary
         public virtual void Initialize()
         {
-            commands = "red,yellow,go,adeek";
+            commands = "red,yellow,go,play,pause,next,previous,mute";
             voiceCommands = new VoiceCommands(ScreenManager.Kinect.nui, commands);
             var voiceThread = new Thread(voiceCommands.StartAudioStream);
             voiceThread.Start();
+            songs = new Song[2];
+            playQueue = 1;
         }
 
         /// <summary>
@@ -108,7 +121,53 @@ namespace KinectControl.UI
 
             frameNumber++;
 
-
+           /* if(voiceCommands.GetHeard("pause"))
+            {
+                if(MediaPlayer.State.Equals(MediaState.Playing))
+                MediaPlayer.Pause();
+            }
+            if(voiceCommands.GetHeard("play"))
+            {
+                if(MediaPlayer.State.Equals(MediaState.Paused))
+                MediaPlayer.Resume();
+            }
+            if(voiceCommands.GetHeard("next"))
+            {
+                playQueue++;
+            }
+            if(voiceCommands.GetHeard("previous"))
+            {
+                playQueue--;
+            }
+            if(voiceCommands.GetHeard("mute"))
+            {
+                MediaPlayer.IsMuted=true;
+            }
+            if (MediaPlayer.State.Equals(MediaState.Stopped))
+            {
+                switch (playQueue)
+                {
+                    case 1:
+                        {
+                            MediaPlayer.Play(songs[0]);
+                            playQueue = 2;
+                            break;
+                        }
+                    case 2:
+                        {
+                            MediaPlayer.Play(songs[1]);
+                            playQueue = 3;
+                            break;
+                        }
+                    case 3:
+                        {
+                            playQueue = 1;
+                            break;
+                        }
+                    default: break;
+                }
+            }
+            */
             if (!IsFrozen)
                 if (enablePause)
                 {
