@@ -14,7 +14,7 @@ namespace Mechanect.Common
         SpeechRecognitionEngine speechRecognitionEngine;
         Stream stream;
         readonly KinectSensor kinect;
-        public string heardString = "btengan";
+        public string heardString = "";
 
         public VoiceCommands(KinectSensor kinect, string commands)
         {

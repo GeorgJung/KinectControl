@@ -165,6 +165,17 @@ namespace KinectControl.Common
             //add event handler
             comPort.DataReceived += new SerialDataReceivedEventHandler(comPort_DataReceived);
         }
+
+        public CommunicationManager(string baud, string par, string sBits, string dBits, string name)
+        {
+            _baudRate = baud;
+            _parity = par;
+            _stopBits = sBits;
+            _dataBits = dBits;
+            _portName = name;
+            //now add an event handler
+            comPort.DataReceived += new SerialDataReceivedEventHandler(comPort_DataReceived);
+        }
         #endregion
 
         #region WriteData
@@ -306,6 +317,25 @@ namespace KinectControl.Common
             }
         }
         #endregion
+        public bool ClosePort()
+        {
+            try
+            {
+                //first check if the port is already open
+                //if its open then close it
+                if ((comPort.IsOpen == true) && (comPort.BytesToRead == 0)) comPort.Close();
+
+                //display message
+                DisplayData(MessageType.Normal, "Port closed at " + DateTime.Now + "\n");
+                //return false
+                return false;
+            }
+            catch (Exception ex)
+            {
+                DisplayData(MessageType.Error, ex.Message);
+                return true;
+            }
+        }
 
         #region SetParityValues
         public void SetParityValues(object obj)

@@ -265,13 +265,15 @@ namespace KinectControl.Common
         }
         public void InitializeGestures()
         {
-            IRelativeGestureSegment[] waveLeftSegments = new IRelativeGestureSegment[4];
+            IRelativeGestureSegment[] waveLeftSegments = new IRelativeGestureSegment[6];
             WaveLeftSegment1 waveLeftSegment1 = new WaveLeftSegment1();
             WaveLeftSegment2 waveLeftSegment2 = new WaveLeftSegment2();
             waveLeftSegments[0] = waveLeftSegment1;
             waveLeftSegments[1] = waveLeftSegment2;
             waveLeftSegments[2] = waveLeftSegment1;
             waveLeftSegments[3] = waveLeftSegment2;
+            waveLeftSegments[4] = waveLeftSegment1;
+            waveLeftSegments[5] = waveLeftSegment2;
             this.gestureController.AddGesture(GestureType.WaveLeft, waveLeftSegments);
             IRelativeGestureSegment[] PunchSegments = new IRelativeGestureSegment[1];
             PunchGesture1 punchGesture1 = new PunchGesture1();
