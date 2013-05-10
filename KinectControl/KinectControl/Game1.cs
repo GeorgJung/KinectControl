@@ -15,6 +15,7 @@ namespace KinectControl
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         ScreenManager screenManager;
+        CommunicationManager comm;
         public Kinect Kinect;
 
         public Game1()
@@ -33,13 +34,16 @@ namespace KinectControl
         protected override void Initialize()
         {
             //initializations
+            comm = new CommunicationManager("9600", "COM18");
+            comm.WriteData("1");
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            screenManager.AddScreen(new IntroScreen());
+            screenManager.AddScreen(new MainScreen());
+
         }
 
         protected override void UnloadContent()
