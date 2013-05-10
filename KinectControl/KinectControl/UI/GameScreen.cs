@@ -1,9 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
-using Mechanect.Common;
 using System.Threading;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
+using KinectControl.Common;
 
 namespace KinectControl.UI
 {
@@ -28,8 +28,13 @@ namespace KinectControl.UI
         private SpriteBatch spriteBatch;
         private SpriteFont font;
         private int frameNumber;
-        public UserAvatar userAvatar;
-        public VoiceCommands voiceCommands;
+        private UserAvatar userAvatar;
+        public UserAvatar UserAvatar
+        {
+            get { return userAvatar; }
+            set { userAvatar = value; }
+        }
+        private VoiceCommands voiceCommands;
         //Array of Background songs.
         public Song[] songs;
 
@@ -203,7 +208,7 @@ namespace KinectControl.UI
             if (showAvatar)
                 userAvatar.Draw(gameTime);
             spriteBatch.Begin();
-            spriteBatch.DrawString(font, voiceCommands.heardString, new Vector2(300,300), Color.Orange);
+            spriteBatch.DrawString(font, voiceCommands.HeardString, new Vector2(300,300), Color.Orange);
             spriteBatch.End();
         }
 

@@ -34,7 +34,7 @@ namespace KinectControl.Screens
         }
         public override void Update(GameTime gameTime)
         {
-            if (userAvatar.Avatar.Equals(userAvatar.AllAvatars[2]))
+            if (UserAvatar.Avatar.Equals(UserAvatar.AllAvatars[2]))
                 this.Remove();
             base.Update(gameTime);
         }

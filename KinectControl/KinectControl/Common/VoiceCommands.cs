@@ -6,15 +6,20 @@ using Microsoft.Speech.Recognition;
 using System.IO;
 
 
-namespace Mechanect.Common
+namespace KinectControl.Common
 {
-    public class VoiceCommands
+     class VoiceCommands
     {
-        KinectAudioSource kinectAudio;
-        SpeechRecognitionEngine speechRecognitionEngine;
-        Stream stream;
-        readonly KinectSensor kinect;
-        public string heardString = "";
+        private KinectAudioSource kinectAudio;
+        private SpeechRecognitionEngine speechRecognitionEngine;
+        private Stream stream;
+        private readonly KinectSensor kinect;
+        private string heardString;
+        public string HeardString
+        {
+            get { return heardString; }
+            set { heardString = value; }
+        }
 
         public VoiceCommands(KinectSensor kinect, string commands)
         {
@@ -24,6 +29,7 @@ namespace Mechanect.Common
 
         private void InitalizeKinectAudio(string commands)
         {
+             heardString = "";
             string[] arrayOfCommands = commands.Split(',');
             RecognizerInfo recognizerInfo = GetKinectRecognizer();
             if(recognizerInfo != null)
@@ -64,7 +70,7 @@ namespace Mechanect.Common
 
         private void SpeechRecognitionEngineSpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            if (e.Result.Confidence >= 0.55)
+            if (e.Result.Confidence >= 0.65)
                 heardString = e.Result.Text;
         }
 
