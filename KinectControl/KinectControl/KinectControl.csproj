@@ -124,7 +124,6 @@
     <Compile Include="Common\IRelativeGestureSegment.cs" />
     <Compile Include="Common\Kinect.cs" />
     <Compile Include="Common\PunchGesture.cs" />
-    <Compile Include="Common\SerialInterface.cs" />
     <Compile Include="Common\VoiceCommands.cs" />
     <Compile Include="Common\WaveGesture.cs" />
     <Compile Include="Screens\FadingScreen.cs" />

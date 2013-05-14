@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Text;
-using System.Drawing;
 using System.IO.Ports;
-using System.Windows.Forms;
 using System.Diagnostics;
 namespace KinectControl.Common
 {
