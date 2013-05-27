@@ -44,7 +44,6 @@ namespace KinectControl.Common
         public void AddGesture(GestureType type, IRelativeGestureSegment[] gestureDefinition)
         {
             Gesture gesture = new Gesture(type, gestureDefinition);
-            //gesture.GestureRecognized += new EventHandler<GestureEventArgs>(this.Gesture_GestureRecognized);
             gesture.GestureRecognized += OnGestureRecognized;
             this.gestures.Add(gesture);
         }

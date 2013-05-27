@@ -30,6 +30,6 @@ namespace KinectControl.Common
     {
         None,
         WaveLeft,
-        PunchGesture,
+        RaiseHand,
     }
 }

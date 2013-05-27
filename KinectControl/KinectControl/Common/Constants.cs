@@ -6,7 +6,6 @@ namespace KinectControl.Common
     {
         public const int hPad = 32;
         public const int vPad = 16;
-        public static Skeleton oldSkeleton;
 
         public static void ResetFlags()
         {

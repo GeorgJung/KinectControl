@@ -66,8 +66,8 @@ namespace KinectControl.UI
             if (screensToUpdate.Count == 0)
             {
                 GameScreen screen = screens.FindLast(delegate(GameScreen g) { return g.IsFrozen; });
+                if(screen!=null)
                 screen.UnfreezeScreen();
-                screen.screenPaused = false;
                 screensToUpdate.Add(screen);
             }
             else
@@ -75,7 +75,6 @@ namespace KinectControl.UI
                 while (screensToUpdate.Count > 0)
                 {
                     GameScreen screen = screensToUpdate[screensToUpdate.Count - 1];
-
                     screensToUpdate.RemoveAt(screensToUpdate.Count - 1);
                     screen.Update(gameTime);
                 }
@@ -91,7 +90,6 @@ namespace KinectControl.UI
             {
                 if (screen.ScreenState == ScreenState.Hidden)
                     continue;
-
                 screen.Draw(gameTime);
             }
         }

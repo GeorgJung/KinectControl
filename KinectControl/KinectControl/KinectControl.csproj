@@ -60,7 +60,7 @@
     <XnaCompressContent>true</XnaCompressContent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Kinect, Version=1.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Kinect, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.Speech\11.0.0.0__31bf3856ad364e35\Microsoft.Speech.dll</HintPath>
@@ -118,12 +118,13 @@
     <Compile Include="Common\CommunicationManager.cs" />
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\Gesture.cs" />
+    <Compile Include="Common\RaiseHandGesture.cs" />
     <Compile Include="Common\GestureController.cs" />
     <Compile Include="Common\GestureEnumTypes.cs" />
     <Compile Include="Common\GestureEventArgs.cs" />
     <Compile Include="Common\IRelativeGestureSegment.cs" />
     <Compile Include="Common\Kinect.cs" />
-    <Compile Include="Common\PunchGesture.cs" />
+    <Compile Include="Common\MyExtension.cs" />
     <Compile Include="Common\VoiceCommands.cs" />
     <Compile Include="Common\WaveGesture.cs" />
     <Compile Include="Screens\FadingScreen.cs" />

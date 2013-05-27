@@ -21,27 +21,42 @@ namespace KinectControl.Common
             set { _portName = value; }
         }
 
-        public CommunicationManager(string baud, string name)
+        public CommunicationManager(string baud)
         {
             _baudRate = baud;
-            _portName = name;
-            port1 = new SerialPort(name, Int32.Parse(baud));
-            port1.DataReceived += new SerialDataReceivedEventHandler(port1_DataReceived);
+            try
+            {
+                _portName = SerialPort.GetPortNames()[1];
+                port1 = new SerialPort(_portName, Int32.Parse(baud));
+                port1.DataReceived += new SerialDataReceivedEventHandler(port1_DataReceived);
+            }
+            catch (Exception)
+            {
+                _portName = "";
+            }
         }
 
         public void WriteData(string msg)
         {
-            if (!(port1.IsOpen == true)) port1.Open();
-            port1.Write(msg);
+            if (!_portName.Equals(""))
+            {
+                if (!(port1.IsOpen == true)) 
+                port1.Open();
+                port1.Write(msg);
+            }
         }
 
         public bool OpenPort()
         {
             try
             {
-                port1.Open();
-                Debug.WriteLine(MessageType.Normal, "Port opened at " + DateTime.Now + "\n");
-                return true;
+                if (!_portName.Equals(""))
+                {
+                    port1.Open();
+                    Debug.WriteLine(MessageType.Normal, "Port opened at " + DateTime.Now + "\n");
+                    return true;
+                }
+                else return false;
             }
             catch (Exception ex)
             {
@@ -64,23 +79,6 @@ namespace KinectControl.Common
                 return true;
             }
         }
-        //public void ChoosePort()
-        //{
-        //    foreach (string portname in SerialPort.GetPortNames())
-        //    {
-        //        try
-        //        {
-        //            _portName = "COM18";
-        //            OpenPort();
-        //            port1.WriteLine("1");
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            Debug.WriteLine(ex.Message);
-        //        }
-
-        //    }
-        //}
 
         void port1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {

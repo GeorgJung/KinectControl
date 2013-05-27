@@ -15,7 +15,6 @@ namespace KinectControl
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         ScreenManager screenManager;
-        CommunicationManager comm;
         public Kinect Kinect;
 
         public Game1()
@@ -23,7 +22,7 @@ namespace KinectControl
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = 1280;
             graphics.PreferredBackBufferHeight = 720;
-            graphics.IsFullScreen = false;
+            graphics.IsFullScreen = true;
             Content.RootDirectory = "Content";
             Kinect = new Kinect(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
             screenManager = new ScreenManager(this, Kinect);
@@ -34,21 +33,14 @@ namespace KinectControl
         protected override void Initialize()
         {
             //initializations
-            comm = new CommunicationManager("9600", "COM18");
-            comm.WriteData("1");
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            screenManager.AddScreen(new MainScreen());
-
-        }
-
-        protected override void UnloadContent()
-        {
-
+            screenManager.AddScreen(new IntroScreen());
+            base.LoadContent();
         }
 
         protected override void Update(GameTime gameTime)

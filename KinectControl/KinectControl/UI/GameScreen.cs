@@ -4,6 +4,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
 using KinectControl.Common;
+using System.Collections.Generic;
+using System;
 
 namespace KinectControl.UI
 {
@@ -29,17 +31,13 @@ namespace KinectControl.UI
         private SpriteFont font;
         private int frameNumber;
         private UserAvatar userAvatar;
+        private List<Song> songs;
         public UserAvatar UserAvatar
         {
             get { return userAvatar; }
             set { userAvatar = value; }
         }
         private VoiceCommands voiceCommands;
-        //Array of Background songs.
-        public Song[] songs;
-
-        //Index of current song.
-        public int playQueue;
 
         public bool IsFrozen
         {
@@ -69,10 +67,7 @@ namespace KinectControl.UI
                 return screenState == ScreenState.Active;
             }
         }
-
-        public bool enablePause = false;
         public bool showAvatar = true;
-        public bool screenPaused;
         private string commands;
 
         /// <summary>
@@ -84,28 +79,23 @@ namespace KinectControl.UI
             content = ScreenManager.Game.Content;
             spriteBatch = ScreenManager.SpriteBatch;
             font = content.Load<SpriteFont>("SpriteFont1");
-            songs[0] = content.Load<Song>("Audio\\song");
-            songs[1] = content.Load<Song>("Audio\\song2");
-            //songs[2] = Content.Load<Song>("Directory\\songtitle");
+            songs = MyExtension.LoadListContent<Song>(content, "Audio\\");
             MediaPlayer.IsRepeating = false;
             if (showAvatar)
             {
-                userAvatar = new UserAvatar(ScreenManager.Kinect, ScreenManager.Game.Content, ScreenManager.GraphicsDevice, ScreenManager.SpriteBatch);
+                userAvatar = new UserAvatar(ScreenManager.Kinect, content, ScreenManager.GraphicsDevice, spriteBatch);
                 userAvatar.LoadContent();
             }
-
+            voiceCommands = new VoiceCommands(ScreenManager.Kinect.nui, commands);
+            var voiceThread = new Thread(voiceCommands.StartAudioStream);
+            voiceThread.Start();
         }
         /// <summary>
         /// Initializes the GameScreen.
         /// </summary
         public virtual void Initialize()
         {
-            commands = "red,yellow,go,play,pause,next,previous,mute";
-            voiceCommands = new VoiceCommands(ScreenManager.Kinect.nui, commands);
-            var voiceThread = new Thread(voiceCommands.StartAudioStream);
-            voiceThread.Start();
-            songs = new Song[2];
-            playQueue = 1;
+            commands = "red,go,yellow,next,previous,stop,shuffle,mute,unmute";
         }
 
         /// <summary>
@@ -126,71 +116,41 @@ namespace KinectControl.UI
 
             frameNumber++;
 
-           /* if(voiceCommands.GetHeard("pause"))
+            if (voiceCommands.GetHeard("red"))
             {
-                if(MediaPlayer.State.Equals(MediaState.Playing))
-                MediaPlayer.Pause();
+                if (MediaPlayer.State.Equals(MediaState.Playing))
+                    MediaPlayer.Pause();
             }
-            if(voiceCommands.GetHeard("play"))
+            else if (voiceCommands.GetHeard("go"))
             {
-                if(MediaPlayer.State.Equals(MediaState.Paused))
-                MediaPlayer.Resume();
-            }
-            if(voiceCommands.GetHeard("next"))
-            {
-                playQueue++;
-            }
-            if(voiceCommands.GetHeard("previous"))
-            {
-                playQueue--;
-            }
-            if(voiceCommands.GetHeard("mute"))
-            {
-                MediaPlayer.IsMuted=true;
-            }
-            if (MediaPlayer.State.Equals(MediaState.Stopped))
-            {
-                switch (playQueue)
+                if (MediaPlayer.State.Equals(MediaState.Paused))
+                    MediaPlayer.Resume();
+                else if (MediaPlayer.State.Equals(MediaState.Stopped))
                 {
-                    case 1:
-                        {
-                            MediaPlayer.Play(songs[0]);
-                            playQueue = 2;
-                            break;
-                        }
-                    case 2:
-                        {
-                            MediaPlayer.Play(songs[1]);
-                            playQueue = 3;
-                            break;
-                        }
-                    case 3:
-                        {
-                            playQueue = 1;
-                            break;
-                        }
-                    default: break;
+                    var array = songs.ToArray();
+                    Random random = new Random();
+                    var x = random.Next(songs.Count);
+                    MediaPlayer.Play(array[x]);
                 }
             }
-            */
-            if (!IsFrozen)
-                if (enablePause)
-                {
-                    if (userAvatar.Avatar == userAvatar.AllAvatars[0])
-                    {
-                        //Freeze Screen, Show pause Screen\
-                     //   screenPaused = true;
-                       // ScreenManager.AddScreen(new PauseScreen());
-                   //     this.FreezeScreen();
-                    }
-                    else if (userAvatar.Avatar.Equals(userAvatar.AllAvatars[2]) && screenPaused == true)
-                    {
-                        //exit pause screen, unfreeze screen
-                        this.UnfreezeScreen();
-                    }
-                }
-
+            else if (voiceCommands.GetHeard("next"))
+            {
+                    MediaPlayer.MoveNext();
+            }
+            else if (voiceCommands.GetHeard("previous"))
+            {
+                    MediaPlayer.MovePrevious();
+            }
+            else if (voiceCommands.GetHeard("mute"))
+            {
+                MediaPlayer.IsMuted = true;
+            }
+            else if (voiceCommands.GetHeard("unmute"))
+            {
+                MediaPlayer.IsMuted = false;
+            }
         }
+             
 
         /// <summary>
         /// Removes the current screen.
