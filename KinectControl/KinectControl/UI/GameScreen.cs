@@ -95,7 +95,7 @@ namespace KinectControl.UI
         /// </summary
         public virtual void Initialize()
         {
-            commands = "red,go,yellow,next,previous,stop,shuffle,mute,unmute";
+            commands = "white,red,mute,unmute";
         }
 
         /// <summary>
@@ -116,12 +116,12 @@ namespace KinectControl.UI
 
             frameNumber++;
 
-            if (voiceCommands.GetHeard("red"))
+            if (voiceCommands.GetHeard("pose"))
             {
                 if (MediaPlayer.State.Equals(MediaState.Playing))
                     MediaPlayer.Pause();
             }
-            else if (voiceCommands.GetHeard("go"))
+            else if (voiceCommands.GetHeard("play"))
             {
                 if (MediaPlayer.State.Equals(MediaState.Paused))
                     MediaPlayer.Resume();
