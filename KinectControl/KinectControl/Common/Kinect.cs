@@ -179,12 +179,11 @@ namespace KinectControl.Common
                     }
                         break;
             }
-            comm.ClosePort();
-             
+            comm.ClosePort(); 
         }
         public void InitializeGestures()
         {
-            nui.ElevationAngle = 10;
+            nui.ElevationAngle = 15;
             comm = new CommunicationManager("9600");
             IRelativeGestureSegment[] waveLeftSegments = new IRelativeGestureSegment[6];
             WaveLeftSegment1 waveLeftSegment1 = new WaveLeftSegment1();

@@ -80,7 +80,7 @@ namespace KinectControl.Common
             {
                 string value;
                 matchFunction.AdditionalInfo.TryGetValue("Kinect", out value);
-                return "True".Equals(value, StringComparison.InvariantCultureIgnoreCase) && "en-IE".Equals(matchFunction.Culture.Name, StringComparison.InvariantCultureIgnoreCase);
+                return "True".Equals(value, StringComparison.InvariantCultureIgnoreCase) && "en-CA".Equals(matchFunction.Culture.Name, StringComparison.InvariantCultureIgnoreCase);
             };
             return SpeechRecognitionEngine.InstalledRecognizers().Where(matchingFunc).FirstOrDefault();
         }
