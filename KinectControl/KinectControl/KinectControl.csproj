@@ -118,6 +118,7 @@
     <Compile Include="Common\CommunicationManager.cs" />
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\Gesture.cs" />
+    <Compile Include="Common\LowerHand.cs" />
     <Compile Include="Common\RaiseHandGesture.cs" />
     <Compile Include="Common\GestureController.cs" />
     <Compile Include="Common\GestureEnumTypes.cs" />

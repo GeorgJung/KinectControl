@@ -51,6 +51,9 @@ namespace KinectControl.Common
             try
             {
                 kinectAudio = kinect.AudioSource;
+                kinectAudio.BeamAngleMode = BeamAngleMode.Adaptive;
+                kinect.AudioSource.EchoCancellationMode = EchoCancellationMode.None;
+                kinect.AudioSource.AutomaticGainControlEnabled = false;
                 stream = kinectAudio.Start();
                 speechRecognitionEngine.SetInputToAudioStream(stream,
                                                               new SpeechAudioFormatInfo(EncodingFormat.Pcm, 16000, 16, 1,
@@ -80,7 +83,7 @@ namespace KinectControl.Common
             {
                 string value;
                 matchFunction.AdditionalInfo.TryGetValue("Kinect", out value);
-                return "True".Equals(value, StringComparison.InvariantCultureIgnoreCase) && "en-CA".Equals(matchFunction.Culture.Name, StringComparison.InvariantCultureIgnoreCase);
+                return "True".Equals(value, StringComparison.InvariantCultureIgnoreCase) && "en-US".Equals(matchFunction.Culture.Name, StringComparison.InvariantCultureIgnoreCase);
             };
             return SpeechRecognitionEngine.InstalledRecognizers().Where(matchingFunc).FirstOrDefault();
         }

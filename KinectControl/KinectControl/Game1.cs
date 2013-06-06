@@ -22,7 +22,7 @@ namespace KinectControl
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = 1280;
             graphics.PreferredBackBufferHeight = 720;
-            graphics.IsFullScreen = true;
+            graphics.IsFullScreen = false;
             Content.RootDirectory = "Content";
             Kinect = new Kinect(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
             screenManager = new ScreenManager(this, Kinect);

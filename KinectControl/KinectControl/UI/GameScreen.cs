@@ -86,7 +86,6 @@ namespace KinectControl.UI
                 userAvatar = new UserAvatar(ScreenManager.Kinect, content, ScreenManager.GraphicsDevice, spriteBatch);
                 userAvatar.LoadContent();
             }
-            voiceCommands = new VoiceCommands(ScreenManager.Kinect.nui, commands);
             var voiceThread = new Thread(voiceCommands.StartAudioStream);
             voiceThread.Start();
         }
@@ -96,6 +95,7 @@ namespace KinectControl.UI
         public virtual void Initialize()
         {
             commands = "play,pause,next,previous,shuffle,white,red,mute,unmute";
+            voiceCommands = new VoiceCommands(ScreenManager.Kinect.nui, commands);
         }
 
         /// <summary>
@@ -116,12 +116,12 @@ namespace KinectControl.UI
 
             frameNumber++;
 
-            if (voiceCommands.GetHeard("red"))
+            if (voiceCommands.GetHeard("pause"))
             {
                 if (MediaPlayer.State.Equals(MediaState.Playing))
                     MediaPlayer.Pause();
             }
-            else if (voiceCommands.GetHeard("white"))
+            else if (voiceCommands.GetHeard("play"))
             {
                 if (MediaPlayer.State.Equals(MediaState.Paused))
                     MediaPlayer.Resume();
