@@ -3,16 +3,14 @@ using System.Linq;
 using Microsoft.Kinect;
 using Microsoft.Speech.AudioFormat;
 using Microsoft.Speech.Recognition;
-using System.IO;
 
 
 namespace KinectControl.Common
 {
-     class VoiceCommands
+     public class VoiceCommands
     {
         private KinectAudioSource kinectAudio;
         private SpeechRecognitionEngine speechRecognitionEngine;
-        private Stream stream;
         private readonly KinectSensor kinect;
         private string heardString;
         public string HeardString
@@ -21,21 +19,20 @@ namespace KinectControl.Common
             set { heardString = value; }
         }
 
-        public VoiceCommands(KinectSensor kinect, string commands)
+        public VoiceCommands(KinectSensor kinect, string[] commands)
         {
             this.kinect = kinect;
             InitalizeKinectAudio(commands);
         }
 
-        private void InitalizeKinectAudio(string commands)
+        private void InitalizeKinectAudio(string[] commands)
         {
              heardString = "";
-            string[] arrayOfCommands = commands.Split(',');
             RecognizerInfo recognizerInfo = GetKinectRecognizer();
             if(recognizerInfo != null)
             speechRecognitionEngine = new SpeechRecognitionEngine(recognizerInfo.Id);
             var choices = new Choices();
-            foreach (var command in arrayOfCommands)
+            foreach (var command in commands)
             {
                 choices.Add(command);
             }
@@ -51,10 +48,12 @@ namespace KinectControl.Common
             try
             {
                 kinectAudio = kinect.AudioSource;
-                kinectAudio.BeamAngleMode = BeamAngleMode.Adaptive;
+                kinectAudio.BeamAngleMode = BeamAngleMode.Manual;
+                kinectAudio.ManualBeamAngle = Math.PI / 180.0 * 10.0; //angle in radians
+                //kinectAudio.BeamAngleMode = BeamAngleMode.Adaptive;
                 kinect.AudioSource.EchoCancellationMode = EchoCancellationMode.None;
                 kinect.AudioSource.AutomaticGainControlEnabled = false;
-                stream = kinectAudio.Start();
+                var stream = kinectAudio.Start();
                 speechRecognitionEngine.SetInputToAudioStream(stream,
                                                               new SpeechAudioFormatInfo(EncodingFormat.Pcm, 16000, 16, 1,
                                                                                         32000, 2, null));
@@ -73,7 +72,7 @@ namespace KinectControl.Common
 
         private void SpeechRecognitionEngineSpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            if (e.Result.Confidence >= 0.60)
+            if (e.Result.Confidence >= 0.57)
                 heardString = e.Result.Text;
         }
 

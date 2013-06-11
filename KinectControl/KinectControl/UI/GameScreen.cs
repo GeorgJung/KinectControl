@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using System.Threading;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
@@ -68,8 +67,6 @@ namespace KinectControl.UI
             }
         }
         public bool showAvatar = true;
-        private string commands;
-
         /// <summary>
         /// LoadContent will be called only once before drawing and it's the place to load
         /// all of your content.
@@ -81,21 +78,18 @@ namespace KinectControl.UI
             font = content.Load<SpriteFont>("SpriteFont1");
             songs = MyExtension.LoadListContent<Song>(content, "Audio\\");
             MediaPlayer.IsRepeating = false;
+            voiceCommands = ScreenManager.Kinect.voiceCommands;
             if (showAvatar)
             {
                 userAvatar = new UserAvatar(ScreenManager.Kinect, content, ScreenManager.GraphicsDevice, spriteBatch);
                 userAvatar.LoadContent();
             }
-            var voiceThread = new Thread(voiceCommands.StartAudioStream);
-            voiceThread.Start();
         }
         /// <summary>
         /// Initializes the GameScreen.
         /// </summary
         public virtual void Initialize()
         {
-            commands = "play,pause,next,previous,shuffle,white,red,mute,unmute";
-            voiceCommands = new VoiceCommands(ScreenManager.Kinect.nui, commands);
         }
 
         /// <summary>
@@ -116,7 +110,7 @@ namespace KinectControl.UI
 
             frameNumber++;
 
-            if (voiceCommands.GetHeard("pause"))
+            if (voiceCommands.GetHeard("stop"))
             {
                 if (MediaPlayer.State.Equals(MediaState.Playing))
                     MediaPlayer.Pause();

@@ -88,7 +88,15 @@ C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\Ki
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\KinectControl.exe
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\KinectControl.pdb
-C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song.xnb
-C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song2.xnb
-C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song.wma
-C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song2.wma
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\02 Queen of the Gas Station.xnb
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\02 Queen of the Gas Station.wma
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\03 Oh Say Can You See.xnb
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\04 - Video Games.xnb
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Amaranthe - Amaranthine&rlm;.xnb
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Five Finger Death Punch - Remember Everything&rlm;.xnb
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Hardcore Superstar - Liberation&rlm;.xnb
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\03 Oh Say Can You See.wma
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\04 - Video Games.wma
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Amaranthe - Amaranthine&rlm;.wma
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Five Finger Death Punch - Remember Everything&rlm;.wma
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Hardcore Superstar - Liberation&rlm;.wma

@@ -2,18 +2,19 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using Microsoft.Kinect;
+using System.Threading;
 
 namespace KinectControl.Common
 {
-    /// <summary>
-    /// Author : Microsoft
-    /// </summary>
+   
     public class Kinect
     {
         #region Gesture's variables
         private GestureController gestureController;
         private string _gesture;
-        private bool LED1,LED2,LED3=false;
+        private bool LED1,LED2=false;
+        private string[] commands;
+        private VoiceCommands _voiceCommands;
         public event PropertyChangedEventHandler PropertyChanged;
         public int framesCount;
         CommunicationManager comm;
@@ -21,6 +22,11 @@ namespace KinectControl.Common
         {
             get { return framesCount; }
             set { framesCount = value; }
+        }
+        public VoiceCommands voiceCommands
+        {
+            get { return _voiceCommands; }
+            set { _voiceCommands = value; }
         }
         public String Gesture
         {
@@ -95,6 +101,20 @@ namespace KinectControl.Common
             gestureController = new GestureController();
             InitializeGestures();
             gestureController.GestureRecognized += OnGestureRecognized;
+            InitializeVoiceGrammar();
+        }
+        public void InitializeVoiceGrammar()
+        {
+            commands = new string[6];
+            commands[0] = "play";
+            commands[1] = "stop";
+            commands[2] = "next";
+            commands[3] = "previous";
+            commands[4] = "mute";
+            commands[5] = "unmute";
+            _voiceCommands = new VoiceCommands(nui, commands);
+            var voiceThread = new Thread(_voiceCommands.StartAudioStream);
+            voiceThread.Start();
         }
 
         /// <summary>
@@ -118,11 +138,11 @@ namespace KinectControl.Common
                             this.trackedSkeleton = skeleton;
                         }
                     }
+                    framesCount++;
                     if (trackedSkeleton != null)
                     {
                         if (GenerateDepth() > 120)
                         {
-                            framesCount++;
                             gestureController.UpdateAllGestures(trackedSkeleton);
                         }
                     }
