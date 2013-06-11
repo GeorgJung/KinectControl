@@ -249,38 +249,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Audio\03 Oh Say Can You See.mp3">
-      <Name>03 Oh Say Can You See</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="Audio\04 - Video Games.mp3">
-      <Name>04 - Video Games</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="Audio\Amaranthe - Amaranthine&amp;rlm%3b.mp3">
-      <Name>Amaranthe - Amaranthine&amp;rlm%3b</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="Audio\Five Finger Death Punch - Remember Everything&amp;rlm%3b.mp3">
-      <Name>Five Finger Death Punch - Remember Everything&amp;rlm%3b</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="Audio\Hardcore Superstar - Liberation&amp;rlm%3b.mp3">
-      <Name>Hardcore Superstar - Liberation&amp;rlm%3b</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Audio\02 Queen of the Gas Station.mp3">
-      <Name>02 Queen of the Gas Station</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
+    <Folder Include="Audio\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
