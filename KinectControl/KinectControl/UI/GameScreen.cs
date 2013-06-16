@@ -26,9 +26,21 @@ namespace KinectControl.UI
     public abstract class GameScreen
     {
         private ContentManager content;
+        private Song[] songsarray;
+        private int playQueue;
         private SpriteBatch spriteBatch;
         private SpriteFont font;
         private int frameNumber;
+        public int FrameNumber
+        {
+            get
+            {
+                return frameNumber;
+            }
+            set
+            {
+            }
+        }
         private UserAvatar userAvatar;
         private List<Song> songs;
         public UserAvatar UserAvatar
@@ -73,11 +85,14 @@ namespace KinectControl.UI
         /// </summary>
         public virtual void LoadContent()
         {
+            frameNumber = Kinect.FramesCount;
             content = ScreenManager.Game.Content;
             spriteBatch = ScreenManager.SpriteBatch;
             font = content.Load<SpriteFont>("SpriteFont1");
             songs = MyExtension.LoadListContent<Song>(content, "Audio\\");
-            MediaPlayer.IsRepeating = false;
+            songsarray = songs.ToArray();
+            Random random = new Random();
+            playQueue = random.Next(songs.Count);
             voiceCommands = ScreenManager.Kinect.voiceCommands;
             if (showAvatar)
             {
@@ -107,41 +122,58 @@ namespace KinectControl.UI
             {
                 userAvatar.Update(gameTime);
             }
+            if (frameNumber % 360 == 0)
+            {
+                voiceCommands.HeardString = "";
+            }
 
             frameNumber++;
-
-            if (voiceCommands.GetHeard("stop"))
+            if (voiceCommands != null)
             {
-                if (MediaPlayer.State.Equals(MediaState.Playing))
-                    MediaPlayer.Pause();
-            }
-            else if (voiceCommands.GetHeard("play"))
-            {
-                if (MediaPlayer.State.Equals(MediaState.Paused))
-                    MediaPlayer.Resume();
-                else if (MediaPlayer.State.Equals(MediaState.Stopped))
+                if (voiceCommands.GetHeard("stop"))
                 {
-                    var array = songs.ToArray();
-                    Random random = new Random();
-                    var x = random.Next(songs.Count);
-                    MediaPlayer.Play(array[x]);
+                    if (MediaPlayer.State.Equals(MediaState.Playing))
+                        MediaPlayer.Pause();
                 }
-            }
-            else if (voiceCommands.GetHeard("next"))
-            {
-                    MediaPlayer.MoveNext();
-            }
-            else if (voiceCommands.GetHeard("previous"))
-            {
-                    MediaPlayer.MovePrevious();
-            }
-            else if (voiceCommands.GetHeard("mute"))
-            {
-                MediaPlayer.IsMuted = true;
-            }
-            else if (voiceCommands.GetHeard("unmute"))
-            {
-                MediaPlayer.IsMuted = false;
+                else if (voiceCommands.GetHeard("play"))
+                {
+                    if (MediaPlayer.State.Equals(MediaState.Paused))
+                        MediaPlayer.Resume();
+                    else if (MediaPlayer.State.Equals(MediaState.Stopped))
+                    {
+                        Random random = new Random();
+                        playQueue = random.Next(songs.Count);
+                        MediaPlayer.Play(songsarray[playQueue]);
+                    }
+                }
+                else if (voiceCommands.GetHeard("next"))
+                {
+                    playQueue++;
+                    if (playQueue < songsarray.Length)
+                    {
+                        MediaPlayer.MoveNext();
+                        MediaPlayer.Play(songsarray[playQueue]);
+                    }
+                    else MediaPlayer.Stop();
+                }
+                else if (voiceCommands.GetHeard("previous"))
+                {
+                    playQueue--;
+                    if (playQueue >= 0)
+                    {
+                        MediaPlayer.MovePrevious();
+                        MediaPlayer.Play(songsarray[playQueue]);
+                    }
+                    else MediaPlayer.Stop();
+                }
+                else if (voiceCommands.GetHeard("mute"))
+                {
+                    MediaPlayer.IsMuted = true;
+                }
+                else if (voiceCommands.GetHeard("unmute"))
+                {
+                    MediaPlayer.IsMuted = false;
+                }
             }
         }
              
@@ -162,7 +194,8 @@ namespace KinectControl.UI
             if (showAvatar)
                 userAvatar.Draw(gameTime);
             spriteBatch.Begin();
-            spriteBatch.DrawString(font, voiceCommands.HeardString, new Vector2(300,300), Color.Orange);
+            if(voiceCommands!=null && !voiceCommands.HeardString.Equals(""))
+            spriteBatch.DrawString(font,"voice recognized :" + voiceCommands.HeardString, new Vector2(300,300), Color.Orange);
             spriteBatch.End();
         }
 

@@ -16,9 +16,9 @@ namespace KinectControl.Common
         private string[] commands;
         private VoiceCommands _voiceCommands;
         public event PropertyChangedEventHandler PropertyChanged;
-        public int framesCount;
+        private static int framesCount;
         CommunicationManager comm;
-        public int FramesCount
+        public static int FramesCount
         {
             get { return framesCount; }
             set { framesCount = value; }
@@ -32,7 +32,7 @@ namespace KinectControl.Common
         {
             get { return _gesture; }
 
-            private set
+            set
             {
                 if (_gesture == value)
                     return;
@@ -169,6 +169,7 @@ namespace KinectControl.Common
         private void OnGestureRecognized(object sender, GestureEventArgs e)
         {
             Debug.WriteLine(e.GestureType);
+            framesCount=0;
             comm.OpenPort();
             switch (e.GestureType)
             {

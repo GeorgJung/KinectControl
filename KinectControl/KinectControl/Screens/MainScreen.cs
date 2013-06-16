@@ -3,7 +3,6 @@ using KinectControl.UI;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework;
 using KinectControl.Common;
-using Microsoft.Kinect;
 
 namespace KinectControl.Screens
 {
@@ -60,6 +59,8 @@ namespace KinectControl.Screens
             button.Update(gameTime);
             button.Clicked += button_Clicked;
             gesture = kinect.Gesture;
+            if (FrameNumber % 240 == 0)
+                kinect.Gesture = "";
             base.Update(gameTime);
         }
 
@@ -68,7 +69,8 @@ namespace KinectControl.Screens
         {
             spriteBatch.Begin();
             spriteBatch.Draw(gradientTexture, new Rectangle(0, 0, 1280, 720), Color.White);
-            spriteBatch.DrawString(font, gesture, new Vector2(500,500), Color.Orange);
+            if (!(gesture.Equals("")))
+            spriteBatch.DrawString(font, "gesture recognized: " + gesture, new Vector2(500,500), Color.Orange);
             button.Draw(spriteBatch);
             hand.Draw(spriteBatch);
             spriteBatch.End();

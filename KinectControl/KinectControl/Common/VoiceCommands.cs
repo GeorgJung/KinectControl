@@ -72,8 +72,11 @@ namespace KinectControl.Common
 
         private void SpeechRecognitionEngineSpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            if (e.Result.Confidence >= 0.57)
+            if (e.Result.Confidence >= 0.56)
+            {
+              Kinect.FramesCount = 0;
                 heardString = e.Result.Text;
+            }
         }
 
         private static RecognizerInfo GetKinectRecognizer()

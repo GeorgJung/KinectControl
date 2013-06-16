@@ -350,67 +350,37 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2013-04-15T15:11:19.6454338+02:00</Time>
+      <Time>2013-06-16T22:54:51.5947412+02:00</Time>
     </Item>
     <Item>
-      <Source>Audio\02 Queen of the Gas Station.mp3</Source>
-      <Name>Audio\02 Queen of the Gas Station</Name>
+      <Source>Audio\song.mp3</Source>
+      <Name>Audio\song</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\02 Queen of the Gas Station.xnb</Output>
-      <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\02 Queen of the Gas Station.wma</Extra>
-      <Time>2012-03-31T22:34:15.25+02:00</Time>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song.xnb</Output>
+      <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song.wma</Extra>
+      <Time>2013-04-12T14:18:48.0454217+02:00</Time>
     </Item>
     <Item>
-      <Source>Audio\03 Oh Say Can You See.mp3</Source>
-      <Name>Audio\03 Oh Say Can You See</Name>
+      <Source>Audio\song2.mp3</Source>
+      <Name>Audio\song2</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\03 Oh Say Can You See.xnb</Output>
-      <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\03 Oh Say Can You See.wma</Extra>
-      <Time>2012-03-31T22:34:15.317+02:00</Time>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song2.xnb</Output>
+      <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song2.wma</Extra>
+      <Time>2012-06-08T22:08:46.3687034+02:00</Time>
     </Item>
     <Item>
-      <Source>Audio\04 - Video Games.mp3</Source>
-      <Name>Audio\04 - Video Games</Name>
+      <Source>Audio\Skepta - Cradle To Da Grave.mp3</Source>
+      <Name>Audio\Skepta - Cradle To Da Grave</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\04 - Video Games.xnb</Output>
-      <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\04 - Video Games.wma</Extra>
-      <Time>2012-03-31T22:55:00.568+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\Amaranthe - Amaranthine&amp;rlm;.mp3</Source>
-      <Name>Audio\Amaranthe - Amaranthine&amp;rlm;</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Amaranthe - Amaranthine&amp;rlm;.xnb</Output>
-      <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Amaranthe - Amaranthine&amp;rlm;.wma</Extra>
-      <Time>2012-06-09T13:13:42.7442691+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\Five Finger Death Punch - Remember Everything&amp;rlm;.mp3</Source>
-      <Name>Audio\Five Finger Death Punch - Remember Everything&amp;rlm;</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Five Finger Death Punch - Remember Everything&amp;rlm;.xnb</Output>
-      <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Five Finger Death Punch - Remember Everything&amp;rlm;.wma</Extra>
-      <Time>2012-06-09T13:02:05.5993947+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\Hardcore Superstar - Liberation&amp;rlm;.mp3</Source>
-      <Name>Audio\Hardcore Superstar - Liberation&amp;rlm;</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Hardcore Superstar - Liberation&amp;rlm;.xnb</Output>
-      <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Hardcore Superstar - Liberation&amp;rlm;.wma</Extra>
-      <Time>2012-06-09T13:10:17.8455496+02:00</Time>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Skepta - Cradle To Da Grave.xnb</Output>
+      <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Skepta - Cradle To Da Grave.wma</Extra>
+      <Time>2013-06-16T23:34:40.1863608+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

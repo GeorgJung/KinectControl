@@ -37,15 +37,9 @@ Content\Textures\GUC.xnb
 Content\Textures\cursor2.xnb
 Content\Textures\gradientTexture.xnb
 Content\SpriteFont1.xnb
-Content\Audio\02 Queen of the Gas Station.xnb
-Content\Audio\02 Queen of the Gas Station.wma
-Content\Audio\03 Oh Say Can You See.xnb
-Content\Audio\03 Oh Say Can You See.wma
-Content\Audio\04 - Video Games.xnb
-Content\Audio\04 - Video Games.wma
-Content\Audio\Amaranthe - Amaranthine&rlm;.xnb
-Content\Audio\Amaranthe - Amaranthine&rlm;.wma
-Content\Audio\Five Finger Death Punch - Remember Everything&rlm;.xnb
-Content\Audio\Five Finger Death Punch - Remember Everything&rlm;.wma
-Content\Audio\Hardcore Superstar - Liberation&rlm;.xnb
-Content\Audio\Hardcore Superstar - Liberation&rlm;.wma
+Content\Audio\song.xnb
+Content\Audio\song.wma
+Content\Audio\song2.xnb
+Content\Audio\song2.wma
+Content\Audio\Skepta - Cradle To Da Grave.xnb
+Content\Audio\Skepta - Cradle To Da Grave.wma
