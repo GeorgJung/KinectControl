@@ -37,9 +37,9 @@ Content\Textures\GUC.xnb
 Content\Textures\cursor2.xnb
 Content\Textures\gradientTexture.xnb
 Content\SpriteFont1.xnb
+Content\Audio\Skepta - Cradle To Da Grave.xnb
+Content\Audio\Skepta - Cradle To Da Grave.wma
 Content\Audio\song.xnb
 Content\Audio\song.wma
 Content\Audio\song2.xnb
 Content\Audio\song2.wma
-Content\Audio\Skepta - Cradle To Da Grave.xnb
-Content\Audio\Skepta - Cradle To Da Grave.wma

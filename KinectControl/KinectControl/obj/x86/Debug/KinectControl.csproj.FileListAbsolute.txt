@@ -88,9 +88,9 @@ C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\Ki
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\KinectControl.exe
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\obj\x86\Debug\KinectControl.pdb
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Skepta - Cradle To Da Grave.xnb
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song.xnb
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song2.xnb
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Skepta - Cradle To Da Grave.wma
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song.wma
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song2.wma
-C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Skepta - Cradle To Da Grave.xnb
-C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Skepta - Cradle To Da Grave.wma

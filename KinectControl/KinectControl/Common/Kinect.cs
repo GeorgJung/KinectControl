@@ -105,13 +105,15 @@ namespace KinectControl.Common
         }
         public void InitializeVoiceGrammar()
         {
-            commands = new string[6];
-            commands[0] = "play";
+            commands = new string[8];
+            commands[0] = "play mediaplayer";
             commands[1] = "stop";
             commands[2] = "next";
             commands[3] = "previous";
             commands[4] = "mute";
             commands[5] = "unmute";
+            commands[6] = "resume";
+            commands[7] = "play project music";
             _voiceCommands = new VoiceCommands(nui, commands);
             var voiceThread = new Thread(_voiceCommands.StartAudioStream);
             voiceThread.Start();
@@ -141,7 +143,7 @@ namespace KinectControl.Common
                     framesCount++;
                     if (trackedSkeleton != null)
                     {
-                        if (GenerateDepth() > 120)
+                        if (GenerateDepth() > 140)
                         {
                             gestureController.UpdateAllGestures(trackedSkeleton);
                         }

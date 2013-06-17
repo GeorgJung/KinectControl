@@ -25,9 +25,11 @@ namespace KinectControl.UI
     /// </summary>
     public abstract class GameScreen
     {
+        MediaLibrary sampleMediaLibrary;
+        Random random;
+        int playQueue;
         private ContentManager content;
         private Song[] songsarray;
-        private int playQueue;
         private SpriteBatch spriteBatch;
         private SpriteFont font;
         private int frameNumber;
@@ -91,8 +93,10 @@ namespace KinectControl.UI
             font = content.Load<SpriteFont>("SpriteFont1");
             songs = MyExtension.LoadListContent<Song>(content, "Audio\\");
             songsarray = songs.ToArray();
-            Random random = new Random();
-            playQueue = random.Next(songs.Count);
+            sampleMediaLibrary = new MediaLibrary();
+            random = new Random();
+            MediaPlayer.Stop(); // stop current audio playback 
+            // generate a random valid index into Albums
             voiceCommands = ScreenManager.Kinect.voiceCommands;
             if (showAvatar)
             {
@@ -122,57 +126,58 @@ namespace KinectControl.UI
             {
                 userAvatar.Update(gameTime);
             }
-            if (frameNumber % 360 == 0)
+            if (frameNumber % 360 == 0 && voiceCommands!=null)
             {
                 voiceCommands.HeardString = "";
             }
-
             frameNumber++;
             if (voiceCommands != null)
             {
-                if (voiceCommands.GetHeard("stop"))
+                switch (voiceCommands.HeardString)
                 {
-                    if (MediaPlayer.State.Equals(MediaState.Playing))
-                        MediaPlayer.Pause();
-                }
-                else if (voiceCommands.GetHeard("play"))
-                {
-                    if (MediaPlayer.State.Equals(MediaState.Paused))
-                        MediaPlayer.Resume();
-                    else if (MediaPlayer.State.Equals(MediaState.Stopped))
-                    {
-                        Random random = new Random();
-                        playQueue = random.Next(songs.Count);
-                        MediaPlayer.Play(songsarray[playQueue]);
-                    }
-                }
-                else if (voiceCommands.GetHeard("next"))
-                {
-                    playQueue++;
-                    if (playQueue < songsarray.Length)
-                    {
+                    case "play project music":
+                        if (MediaPlayer.State.Equals(MediaState.Stopped) || MediaPlayer.State.Equals(MediaState.Paused))
+                        {
+                            playQueue = random.Next(songsarray.Length-1);
+                            MediaPlayer.Play(songsarray[playQueue]);
+                        }
+                        break;
+                    case "stop":
+                        if (MediaPlayer.State.Equals(MediaState.Playing))
+                            MediaPlayer.Pause();
+                        break;
+
+                    case "play mediaplayer":
+                        if (MediaPlayer.State.Equals(MediaState.Stopped) || MediaPlayer.State.Equals(MediaState.Paused))
+                        {
+                            //int i = random.Next(0, sampleMediaLibrary.Songs.Count - 1);
+                            //MediaPlayer.Play(sampleMediaLibrary.Songs[i]);
+                            MediaPlayer.Play(sampleMediaLibrary.Songs);
+                        }
+                        break;
+                    case "resume":
+                        if (MediaPlayer.State.Equals(MediaState.Paused))
+                            MediaPlayer.Resume();
+                        break;
+                    case "next":
+                        //MediaPlayer.MoveNext();
+                        //MediaPlayer.Stop();
                         MediaPlayer.MoveNext();
-                        MediaPlayer.Play(songsarray[playQueue]);
-                    }
-                    else MediaPlayer.Stop();
-                }
-                else if (voiceCommands.GetHeard("previous"))
-                {
-                    playQueue--;
-                    if (playQueue >= 0)
-                    {
+                        //MediaPlayer.Resume();
+                        //MediaPlayer.Play(sampleMediaLibrary.Songs[++playQueue]);
+                        break;
+                    case "previous":
+                        //MediaPlayer.Stop();
                         MediaPlayer.MovePrevious();
-                        MediaPlayer.Play(songsarray[playQueue]);
-                    }
-                    else MediaPlayer.Stop();
-                }
-                else if (voiceCommands.GetHeard("mute"))
-                {
-                    MediaPlayer.IsMuted = true;
-                }
-                else if (voiceCommands.GetHeard("unmute"))
-                {
-                    MediaPlayer.IsMuted = false;
+                        //MediaPlayer.Resume();
+                        //MediaPlayer.Play(sampleMediaLibrary.Songs[--playQueue]);
+                        break;
+                    case "mute":
+                        MediaPlayer.IsMuted = true;
+                        break;
+                    case "unmute":
+                        MediaPlayer.IsMuted = false;
+                        break;
                 }
             }
         }

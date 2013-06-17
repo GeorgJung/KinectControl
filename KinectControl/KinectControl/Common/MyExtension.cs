@@ -20,5 +20,6 @@ namespace KinectControl.Common
             }
             return result;
         }
+
     }
 }
