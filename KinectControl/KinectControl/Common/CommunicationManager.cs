@@ -3,7 +3,7 @@ using System.IO.Ports;
 using System.Diagnostics;
 namespace KinectControl.Common
 {
-    class CommunicationManager
+    public class CommunicationManager
     {
         public enum MessageType { Incoming, Outgoing, Normal, Warning, Error };
         private string _baudRate = string.Empty;

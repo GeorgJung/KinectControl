@@ -117,6 +117,7 @@
   <ItemGroup>
     <Compile Include="Common\CommunicationManager.cs" />
     <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\Device.cs" />
     <Compile Include="Common\Gesture.cs" />
     <Compile Include="Common\LowerHand.cs" />
     <Compile Include="Common\RaiseHandGesture.cs" />

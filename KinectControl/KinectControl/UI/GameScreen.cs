@@ -25,9 +25,9 @@ namespace KinectControl.UI
     /// </summary>
     public abstract class GameScreen
     {
-        MediaLibrary sampleMediaLibrary;
-        Random random;
-        int playQueue;
+        private MediaLibrary sampleMediaLibrary;
+        private Random random;
+        private int playQueue;
         private ContentManager content;
         private Song[] songsarray;
         private SpriteBatch spriteBatch;

@@ -12,7 +12,7 @@ namespace KinectControl.Common
         #region Gesture's variables
         private GestureController gestureController;
         private string _gesture;
-        private bool LED1,LED2=false;
+        private Device[] devices;
         private string[] commands;
         private VoiceCommands _voiceCommands;
         public event PropertyChangedEventHandler PropertyChanged;
@@ -100,8 +100,15 @@ namespace KinectControl.Common
             this.nui.SkeletonFrameReady += this.OnSkeletonFrameReady;
             gestureController = new GestureController();
             InitializeGestures();
+            InitializeDevices();
             gestureController.GestureRecognized += OnGestureRecognized;
             InitializeVoiceGrammar();
+        }
+        public void InitializeDevices()
+        {
+            devices = new Device[2];
+            devices[0] = new Device("LED1", "1", "0");
+            devices[1] = new Device("LED2", "2", "9");
         }
         public void InitializeVoiceGrammar()
         {
@@ -172,37 +179,25 @@ namespace KinectControl.Common
         {
             Debug.WriteLine(e.GestureType);
             framesCount=0;
-            comm.OpenPort();
             switch (e.GestureType)
             {
                 case GestureType.WaveLeft:
                     Gesture = "WaveLeft";
-                    if (LED1 == false)
-                    {
-                        LED1 = true;
-                        comm.WriteData("1");
-                    }
+                    //1,0
+                    if (devices[0].IsSwitchedOn)
+                        devices[0].switchOff(comm);
                     else
-                    {
-                        LED1 = false;
-                        comm.WriteData("0");
-                    }
+                        devices[0].switchOn(comm);
                     break;
                 case GestureType.RaiseHand:
                     Gesture = "RaiseHand";
-                    if (LED2 == false)
-                    {
-                        LED2 = true;
-                        comm.WriteData("2");
-                    }
+                    //2,9
+                    if (devices[1].IsSwitchedOn)
+                        devices[1].switchOff(comm);
                     else
-                    {
-                        LED2 = false;
-                        comm.WriteData("9");
-                    }
+                        devices[1].switchOn(comm);
                         break;
             }
-            comm.ClosePort(); 
         }
         public void InitializeGestures()
         {
