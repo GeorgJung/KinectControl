@@ -43,3 +43,5 @@ Content\Audio\song.xnb
 Content\Audio\song.wma
 Content\Audio\song2.xnb
 Content\Audio\song2.wma
+Content\Textures\gradient.xnb
+Content\Fontopo.xnb

@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Media;
 using KinectControl.Common;
 using System.Collections.Generic;
 using System;
+using KinectControl.Screens;
 
 namespace KinectControl.UI
 {
@@ -31,6 +32,8 @@ namespace KinectControl.UI
         private ContentManager content;
         private Song[] songsarray;
         private SpriteBatch spriteBatch;
+        public bool enablePause;
+        public bool screenPaused;
         private SpriteFont font;
         private int frameNumber;
         public int FrameNumber
@@ -109,6 +112,7 @@ namespace KinectControl.UI
         /// </summary
         public virtual void Initialize()
         {
+            screenPaused = false;
         }
 
         /// <summary>
@@ -125,7 +129,24 @@ namespace KinectControl.UI
             if (showAvatar)
             {
                 userAvatar.Update(gameTime);
+                if (!IsFrozen)
+                if (enablePause)
+                {
+                    if (userAvatar.Avatar == userAvatar.AllAvatars[0])
+                    {
+                        //Freeze Screen, Show pause Screen\
+                        screenPaused = true;
+                        ScreenManager.AddScreen(new PauseScreen());
+                        this.FreezeScreen();
+                    }
+                    else if (userAvatar.Avatar.Equals(userAvatar.AllAvatars[2]) && screenPaused == true)
+                    {
+                        //exit pause screen, unfreeze screen
+                        this.UnfreezeScreen();
+                    }
+                }
             }
+
             if (frameNumber % 360 == 0 && voiceCommands!=null)
             {
                 voiceCommands.HeardString = "";
@@ -178,6 +199,21 @@ namespace KinectControl.UI
                     case "unmute":
                         MediaPlayer.IsMuted = false;
                         break;
+                    case "device one":
+                        if (ScreenManager.Kinect.devices[0].IsSwitchedOn)
+                            ScreenManager.Kinect.devices[0].switchOff(ScreenManager.Kinect.comm);
+                        else
+                            ScreenManager.Kinect.devices[0].switchOn(ScreenManager.Kinect.comm);
+                        voiceCommands.HeardString = "";
+                        break;
+                    case "device two":
+                        if (ScreenManager.Kinect.devices[1].IsSwitchedOn)
+                            ScreenManager.Kinect.devices[1].switchOff(ScreenManager.Kinect.comm);
+                        else
+                            ScreenManager.Kinect.devices[1].switchOn(ScreenManager.Kinect.comm);
+                        voiceCommands.HeardString = "";
+                        break;
+                    default: break;
                 }
             }
         }

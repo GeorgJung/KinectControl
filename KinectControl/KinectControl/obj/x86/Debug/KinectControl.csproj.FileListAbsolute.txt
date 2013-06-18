@@ -94,3 +94,5 @@ C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Co
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\Skepta - Cradle To Da Grave.wma
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song.wma
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song2.wma
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\gradient.xnb
+C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Fontopo.xnb

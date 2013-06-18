@@ -12,12 +12,12 @@ namespace KinectControl.Common
         #region Gesture's variables
         private GestureController gestureController;
         private string _gesture;
-        private Device[] devices;
+        public Device[] devices;
         private string[] commands;
         private VoiceCommands _voiceCommands;
         public event PropertyChangedEventHandler PropertyChanged;
         private static int framesCount;
-        CommunicationManager comm;
+        public CommunicationManager comm;
         public static int FramesCount
         {
             get { return framesCount; }
@@ -112,7 +112,7 @@ namespace KinectControl.Common
         }
         public void InitializeVoiceGrammar()
         {
-            commands = new string[8];
+            commands = new string[10];
             commands[0] = "play mediaplayer";
             commands[1] = "stop";
             commands[2] = "next";
@@ -121,6 +121,8 @@ namespace KinectControl.Common
             commands[5] = "unmute";
             commands[6] = "resume";
             commands[7] = "play project music";
+            commands[8] = "device one";
+            commands[9] = "device two";
             _voiceCommands = new VoiceCommands(nui, commands);
             var voiceThread = new Thread(_voiceCommands.StartAudioStream);
             voiceThread.Start();

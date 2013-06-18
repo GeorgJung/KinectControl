@@ -382,6 +382,24 @@
       <Extra>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Audio\song2.wma</Extra>
       <Time>2012-06-08T22:08:46.3687034+02:00</Time>
     </Item>
+    <Item>
+      <Source>Textures\gradient.png</Source>
+      <Name>Textures\gradient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Textures\gradient.xnb</Output>
+      <Time>2013-06-18T01:46:06.8408077+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Fontopo.spritefont</Source>
+      <Name>Fontopo</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Fontopo.xnb</Output>
+      <Time>2013-06-18T02:32:14.4101036+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
