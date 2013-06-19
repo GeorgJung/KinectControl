@@ -36,8 +36,11 @@ namespace KinectControl.Screens
         public override void Update(GameTime gameTime)
         {
             counter--;
-            if (UserAvatar.Avatar.Equals(UserAvatar.AllAvatars[2]) || counter==0)
+            if (counter == 0)
+            {
                 this.Remove();
+                //UnfreezeScreen();
+            }
             base.Update(gameTime);
         }
         public override void Draw(GameTime gameTime)

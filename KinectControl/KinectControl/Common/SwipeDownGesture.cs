@@ -11,17 +11,20 @@ namespace KinectControl.Common
         /// <returns>GesturePartResult based on if the gesture part has been completed</returns>
         public GesturePartResult CheckGesture(Skeleton skeleton)
         {
-
-            // right hand in front of right shoulder
-            if (skeleton.Joints[JointType.HandRight].Position.Z < skeleton.Joints[JointType.ElbowRight].Position.Z && skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y)
+            if (skeleton.Joints[JointType.HandLeft].Position.Y > skeleton.Joints[JointType.ShoulderCenter].Position.Y)
             {
-                // right hand below head height and hand higher than elbow
-                if (skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.Head].Position.Y && skeleton.Joints[JointType.HandRight].Position.Y > skeleton.Joints[JointType.ElbowRight].Position.Y)
+                // right hand in front of right shoulder
+                if (skeleton.Joints[JointType.HandRight].Position.Z < skeleton.Joints[JointType.ElbowRight].Position.Z && skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y)
                 {
-                    
+                    // right hand below head height and hand higher than elbow
+                    if (skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.Head].Position.Y && skeleton.Joints[JointType.HandRight].Position.Y > skeleton.Joints[JointType.ElbowRight].Position.Y)
+                    {
+
                         return GesturePartResult.Succeed;
+                    }
+                    return GesturePartResult.Pausing;
                 }
-                return GesturePartResult.Pausing;
+                return GesturePartResult.Fail;
             }
             return GesturePartResult.Fail;
         }
@@ -35,17 +38,19 @@ namespace KinectControl.Common
         /// <returns>GesturePartResult based on if the gesture part has been completed</returns>
         public GesturePartResult CheckGesture(Skeleton skeleton)
         {
-            SkeletonAnalyzer analyzer = new SkeletonAnalyzer();
-            analyzer.SetBodySegments(skeleton.Joints[JointType.ShoulderRight], skeleton.Joints[JointType.ElbowRight], skeleton.Joints[JointType.HandRight]);
-            // right hand in front of right shoulder
-            if (skeleton.Joints[JointType.HandRight].Position.Z < skeleton.Joints[JointType.ElbowRight].Position.Z && skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y)
+            if (skeleton.Joints[JointType.HandLeft].Position.Y > skeleton.Joints[JointType.ShoulderCenter].Position.Y)
             {
-                // right hand below right elbow
-                if (skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.ElbowRight].Position.Y)
+                // right hand in front of right shoulder
+                if (skeleton.Joints[JointType.HandRight].Position.Z < skeleton.Joints[JointType.ElbowRight].Position.Z && skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y)
                 {
+                    // right hand below right elbow
+                    if (skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.ElbowRight].Position.Y)
+                    {
                         return GesturePartResult.Succeed;
+                    }
+                    return GesturePartResult.Pausing;
                 }
-                return GesturePartResult.Pausing;
+                return GesturePartResult.Fail;
             }
             return GesturePartResult.Fail;
         }
@@ -63,20 +68,24 @@ namespace KinectControl.Common
         /// <returns>GesturePartResult based on if the gesture part has been completed</returns>
         public GesturePartResult CheckGesture(Skeleton skeleton)
         {
-            // //Right hand in front of right Shoulder
-            if (skeleton.Joints[JointType.HandRight].Position.Z < skeleton.Joints[JointType.ElbowRight].Position.Z && skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y)
+            if (skeleton.Joints[JointType.HandLeft].Position.Y > skeleton.Joints[JointType.ShoulderCenter].Position.Y)
             {
-                // right hand below hip
-                if (skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.HipRight].Position.Y)
+                // //Right hand in front of right Shoulder
+                if (skeleton.Joints[JointType.HandRight].Position.Z < skeleton.Joints[JointType.ElbowRight].Position.Z && skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y)
                 {
+                    // right hand below hip
+                    if (skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.HipRight].Position.Y)
+                    {
                         return GesturePartResult.Succeed;
+                    }
+
+                    // Debug.WriteLine("GesturePart 2 - right hand below shoulder height but above hip height - FAIL");
+                    return GesturePartResult.Pausing;
                 }
 
-                // Debug.WriteLine("GesturePart 2 - right hand below shoulder height but above hip height - FAIL");
-                return GesturePartResult.Pausing;
+                // Debug.WriteLine("GesturePart 2 - Right hand in front of right Shoulder - FAIL");
+                return GesturePartResult.Fail;
             }
-
-            // Debug.WriteLine("GesturePart 2 - Right hand in front of right Shoulder - FAIL");
             return GesturePartResult.Fail;
     }
     }

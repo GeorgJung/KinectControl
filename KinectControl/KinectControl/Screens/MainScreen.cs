@@ -50,7 +50,7 @@ namespace KinectControl.Screens
         }
         void button_Clicked(object sender, System.EventArgs a)
         {
-            ScreenManager.Kinect.comm.ClosePort();
+           // ScreenManager.Kinect.comm.ClosePort();
             //this.Remove();
             this.ScreenManager.Game.Exit();
         }

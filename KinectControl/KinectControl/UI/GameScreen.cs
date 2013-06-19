@@ -209,6 +209,7 @@ namespace KinectControl.UI
                             ScreenManager.Kinect.devices[0].switchOff(ScreenManager.Kinect.comm);
                         else
                             ScreenManager.Kinect.devices[0].switchOn(ScreenManager.Kinect.comm);
+                        //this.FreezeScreen();
                         screenManager.AddScreen(new PauseScreen(ScreenManager.Kinect.devices[0].Name +" is "+ScreenManager.Kinect.devices[0].Status,300));
                         voiceCommands.HeardString = "";
                         break;
@@ -218,6 +219,7 @@ namespace KinectControl.UI
                         else
                             ScreenManager.Kinect.devices[1].switchOn(ScreenManager.Kinect.comm);
                         screenManager.AddScreen(new PauseScreen(ScreenManager.Kinect.devices[1].Name + " is " + ScreenManager.Kinect.devices[1].Status,300));
+                        //this.FreezeScreen();
                         voiceCommands.HeardString = "";
                         break;
                     //case "volume up":
