@@ -115,11 +115,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ClapGesture.cs" />
     <Compile Include="Common\CommunicationManager.cs" />
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\Device.cs" />
     <Compile Include="Common\Gesture.cs" />
-    <Compile Include="Common\LowerHand.cs" />
     <Compile Include="Common\RaiseHandGesture.cs" />
     <Compile Include="Common\GestureController.cs" />
     <Compile Include="Common\GestureEnumTypes.cs" />
@@ -127,6 +127,8 @@
     <Compile Include="Common\IRelativeGestureSegment.cs" />
     <Compile Include="Common\Kinect.cs" />
     <Compile Include="Common\MyExtension.cs" />
+    <Compile Include="Common\SwipeDownGesture.cs" />
+    <Compile Include="Common\SwipeUpGesture.cs" />
     <Compile Include="Common\VoiceCommands.cs" />
     <Compile Include="Common\WaveGesture.cs" />
     <Compile Include="Screens\FadingScreen.cs" />

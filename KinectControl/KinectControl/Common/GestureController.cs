@@ -4,7 +4,6 @@ using Microsoft.Kinect;
 
 namespace KinectControl.Common
 {
-    /// AUTHOR: Khaled
     public class GestureController
     {
         /// <summary>

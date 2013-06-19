@@ -10,7 +10,7 @@ namespace KinectControl.Common
         private string _baudRate = string.Empty;
         private string _portName = string.Empty;
         private static SerialPort port1;
-        public event EventHandler<SerialDataReceivedEventArgs> DataRecieved;
+        //public event EventHandler<SerialDataReceivedEventArgs> DataRecieved;
         public string BaudRate
         {
             get { return _baudRate; }
@@ -25,7 +25,7 @@ namespace KinectControl.Common
 
         public CommunicationManager(string baud)
         {
-            DataRecieved += port1_DataReceived;
+           // DataRecieved += port1_DataReceived;
             _baudRate = baud;
             try
             {

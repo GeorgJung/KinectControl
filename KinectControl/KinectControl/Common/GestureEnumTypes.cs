@@ -4,7 +4,6 @@ namespace KinectControl.Common
     /// <summary>
     /// the gesture part result
     /// </summary>
-    /// AUTHOR: Khaled
     public enum GesturePartResult
     {
         /// <summary>
@@ -15,7 +14,7 @@ namespace KinectControl.Common
         /// <summary>
         /// Gesture part suceed
         /// </summary>
-        Suceed,
+        Succeed,
 
         /// <summary>
         /// Gesture part result undetermined
@@ -30,6 +29,9 @@ namespace KinectControl.Common
     {
         None,
         WaveLeft,
+        SwipeUp,
+        SwipeDown,
         RaiseHand,
+        Clap,
     }
 }

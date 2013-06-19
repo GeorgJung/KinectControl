@@ -3,7 +3,6 @@ using Microsoft.Kinect;
 
 namespace KinectControl.Common
 {
-    /// AUTHOR: Khaled
     class Gesture
     {
         /// <summary>
@@ -69,7 +68,7 @@ namespace KinectControl.Common
             }
 
             GesturePartResult result = this.gestureParts[this.currentGesturePart].CheckGesture(data);
-            if (result == GesturePartResult.Suceed)
+            if (result == GesturePartResult.Succeed)
             {
                 if (this.currentGesturePart + 1 < this.gestureParts.Length)
                 {

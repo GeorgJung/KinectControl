@@ -195,14 +195,20 @@ namespace KinectControl.Common
                     else
                         devices[0].switchOn(comm);
                     break;
-                case GestureType.RaiseHand:
-                    Gesture = "RaiseHand";
+                case GestureType.SwipeUp:
+                    Gesture = "SwipeUp";
                     //2,9
-                    if (devices[1].IsSwitchedOn)
-                        devices[1].switchOff(comm);
-                    else
+                    if (!devices[1].IsSwitchedOn)
                         devices[1].switchOn(comm);
-                        break;
+                    break;
+                case GestureType.SwipeDown:
+                    Gesture = "SwipeDown";
+                    if(devices[1].IsSwitchedOn)
+                    devices[1].switchOff(comm);
+                    break;
+                case GestureType.Clap:
+                    Gesture = "JoinedHands";
+                    break;
             }
         }
         public void InitializeGestures()
@@ -219,12 +225,35 @@ namespace KinectControl.Common
             waveLeftSegments[4] = waveLeftSegment1;
             waveLeftSegments[5] = waveLeftSegment2;
             this.gestureController.AddGesture(GestureType.WaveLeft, waveLeftSegments);
-            IRelativeGestureSegment[] raiseHandSegments = new IRelativeGestureSegment[2];
-            RaiseHandSegment1 raiseHandSegment1 = new RaiseHandSegment1();
-            RaiseHandSegment2 raiseHandSegment2 = new RaiseHandSegment2();
-            raiseHandSegments[0]=raiseHandSegment1;
-            raiseHandSegments[1]=raiseHandSegment2;
-            this.gestureController.AddGesture(GestureType.RaiseHand,raiseHandSegments);
+            IRelativeGestureSegment[] clapSegments = new IRelativeGestureSegment[20];
+            ClapSegment1 clapSegment = new ClapSegment1();
+            for (int i = 0; i < 20; i++)
+            {
+                // gesture consists of the same thing 10 times 
+                clapSegments[i] = clapSegment;
+            }
+            //ClapSegment2 clapSegment2 = new ClapSegment2();
+            //clapSegments[20] = clapSegment2;
+            this.gestureController.AddGesture(GestureType.Clap, clapSegments);
+
+            IRelativeGestureSegment[] swipeUpSegments = new IRelativeGestureSegment[3];
+            swipeUpSegments[0] = new SwipeUpSegment1();
+            swipeUpSegments[1] = new SwipeUpSegment2();
+            swipeUpSegments[2] = new SwipeUpSegment3();
+            gestureController.AddGesture(GestureType.SwipeUp, swipeUpSegments);
+
+            IRelativeGestureSegment[] swipeDownSegments = new IRelativeGestureSegment[3];
+            swipeDownSegments[0] = new SwipeDownSegment1();
+            swipeDownSegments[1] = new SwipeDownSegment2();
+            swipeDownSegments[2] = new SwipeDownSegment3();
+            gestureController.AddGesture(GestureType.SwipeDown, swipeDownSegments);
+            //IRelativeGestureSegment[] raiseHandSegments = new IRelativeGestureSegment[2];
+            //RaiseHandSegment1 raiseHandSegment1 = new RaiseHandSegment1();
+            //RaiseHandSegment2 raiseHandSegment2 = new RaiseHandSegment2();
+            //raiseHandSegments[0]=raiseHandSegment1;
+            //raiseHandSegments[1]=raiseHandSegment2;
+            //this.gestureController.AddGesture(GestureType.RaiseHand,raiseHandSegments);
+            
         }
 
         

@@ -6,7 +6,6 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace KinectControl.Screens
 {
-    /// <para>Author: Khaled Salah</para>
     public class PauseScreen : GameScreen
     {
         private SpriteBatch spriteBatch;

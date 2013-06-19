@@ -8,7 +8,7 @@ namespace KinectControl.Common
         {
             if (skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.HipCenter].Position.Y)
                 if (skeleton.Joints[JointType.HandRight].Position.X >= skeleton.Joints[JointType.HipLeft].Position.X)
-                    return GesturePartResult.Suceed;
+                    return GesturePartResult.Succeed;
                 else return GesturePartResult.Pausing;
             else return GesturePartResult.Fail;
         }
@@ -19,7 +19,7 @@ namespace KinectControl.Common
         {
             if (skeleton.Joints[JointType.HandRight].Position.Y > skeleton.Joints[JointType.HipCenter].Position.Y)
             if (skeleton.Joints[JointType.HandRight].Position.Y > skeleton.Joints[JointType.ShoulderCenter].Position.Y)
-                    return GesturePartResult.Suceed;
+                    return GesturePartResult.Succeed;
                 else return GesturePartResult.Pausing;
             else return GesturePartResult.Fail;
         }

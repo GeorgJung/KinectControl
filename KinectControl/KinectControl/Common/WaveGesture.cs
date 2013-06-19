@@ -12,7 +12,7 @@ namespace KinectControl.Common
                 // hand right of elbow
                 if (skeleton.Joints[JointType.HandLeft].Position.X > skeleton.Joints[JointType.ElbowLeft].Position.X)
                 {
-                    return GesturePartResult.Suceed;
+                    return GesturePartResult.Succeed;
                 }
                 // hand has not dropped but is not quite where we expect it to be, pausing till next frame
                 return GesturePartResult.Pausing;
@@ -39,7 +39,7 @@ namespace KinectControl.Common
                   // hand right of elbow
                  if (skeleton.Joints[JointType.HandLeft].Position.X < skeleton.Joints[JointType.ElbowLeft].Position.X)
                  {
-                      return GesturePartResult.Suceed;
+                      return GesturePartResult.Succeed;
                   }
                   // hand has not dropped but is not quite where we expect it to be, pausing till next frame
                   return GesturePartResult.Pausing;

@@ -9,7 +9,6 @@ namespace KinectControl.UI
     /// This class represents an avatar which tracks a player's distance from the kinect device and changes its color according to this distance, its implemented to work for two players aswell since the kinect device can only track two players maximum at the same time
     /// </summary>
     /// <remarks>
-    /// <para>AUTHOR: Khaled Salah </para>
     /// </remarks>
     public class UserAvatar
     {
@@ -39,7 +38,6 @@ namespace KinectControl.UI
         /// Class constructor for 1 player mode.
         /// </summary>
         /// <remarks>
-        /// <para>AUTHOR: Khaled Salah </para>
         /// </remarks>
         public UserAvatar(Kinect kinect, ContentManager content, GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
         {
@@ -56,7 +54,6 @@ namespace KinectControl.UI
         /// all of your content.
         /// </summary>
         /// <remarks>
-        /// <para>AUTHOR: Khaled Salah </para>
         /// </remarks>
         public void LoadContent()
         {
@@ -74,7 +71,6 @@ namespace KinectControl.UI
         /// This is called when the game screen should draw itself.
         /// </summary>
         /// <remarks>
-        ///<para>AUTHOR: Khaled Salah </para>
         ///</remarks>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>    
         public void Draw(GameTime gameTime)
@@ -91,7 +87,6 @@ namespace KinectControl.UI
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <remarks>
-        ///<para>AUTHOR: Khaled Salah </para>
         ///</remarks>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public void Update(GameTime gameTime)
@@ -104,7 +99,6 @@ namespace KinectControl.UI
         /// Takes the user's index in the users array and calculates the player's distance from the kinect device, and updates the notification message that should be printed if the user is not detected or too far away.
         /// </summary>
         /// <remarks>
-        /// <para>AUTHOR: Khaled Salah </para>
         /// </remarks>
         /// <param name="ID">
         /// The user's index in users array.

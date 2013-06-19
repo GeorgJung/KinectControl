@@ -5,7 +5,6 @@ namespace KinectControl.Common
     /// <summary>
     /// The gesture event arguments
     /// </summary>
-    /// AUTHOR: Khaled
     public class GestureEventArgs : EventArgs
     {
         /// <summary>
