@@ -109,6 +109,10 @@ namespace KinectControl.Common
             devices = new Device[2];
             devices[0] = new Device("LED1", "1", "0");
             devices[1] = new Device("LED2", "2", "9");
+            foreach(Device d in devices)
+            {
+                d.switchOff(comm);
+            }
         }
         public void InitializeVoiceGrammar()
         {

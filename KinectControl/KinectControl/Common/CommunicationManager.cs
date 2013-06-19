@@ -6,9 +6,11 @@ namespace KinectControl.Common
     public class CommunicationManager
     {
         public enum MessageType { Incoming, Outgoing, Normal, Warning, Error };
+        public string msg;
         private string _baudRate = string.Empty;
         private string _portName = string.Empty;
         private static SerialPort port1;
+        public event EventHandler<SerialDataReceivedEventArgs> DataRecieved;
         public string BaudRate
         {
             get { return _baudRate; }
@@ -23,6 +25,7 @@ namespace KinectControl.Common
 
         public CommunicationManager(string baud)
         {
+            DataRecieved += port1_DataReceived;
             _baudRate = baud;
             try
             {
@@ -79,10 +82,9 @@ namespace KinectControl.Common
                 return true;
             }
         }
-
-        void port1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        public void port1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            string msg = port1.ReadExisting();
+            msg = port1.ReadExisting();
             Debug.WriteLine(MessageType.Incoming, msg + "\n");
         }
     }

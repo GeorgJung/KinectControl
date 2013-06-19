@@ -14,12 +14,14 @@ namespace KinectControl.Screens
         private GraphicsDevice graphics;
         private int screenWidth;
         private int screenHeight;
+        private int counter;
         private ContentManager content;
         private string message;
         private Texture2D gradientTexture;
 
-        public PauseScreen() { message = "No user detected, Game paused"; }
-        public PauseScreen(string message) { this.message = message; }
+        public PauseScreen() { message = "No user detected, Game paused"; counter = 1; }
+        public PauseScreen(string message) { this.message = message; counter = 1; }
+        public PauseScreen(string message, int counter) { this.message = message; this.counter = counter; }
 
         public override void LoadContent()
         {
@@ -34,7 +36,8 @@ namespace KinectControl.Screens
         }
         public override void Update(GameTime gameTime)
         {
-            if (UserAvatar.Avatar.Equals(UserAvatar.AllAvatars[2]))
+            counter--;
+            if (UserAvatar.Avatar.Equals(UserAvatar.AllAvatars[2]) || counter==0)
                 this.Remove();
             base.Update(gameTime);
         }

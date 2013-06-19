@@ -118,7 +118,8 @@ namespace KinectControl.UI
         /// <summary>
         /// Unloads the content of GameScreen.
         /// </summary>
-        public virtual void UnloadContent() { }
+        public virtual void UnloadContent() {
+        }
         /// <summary>
         /// Allows the game screen to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -161,6 +162,10 @@ namespace KinectControl.UI
                         {
                             playQueue = random.Next(songsarray.Length-1);
                             MediaPlayer.Play(songsarray[playQueue]);
+                            /*
+                                                        screenManager.AddScreen(new PauseScreen());
+                             * MediaPlayer.PlayPosition.Minutes;
+                             */
                         }
                         break;
                     case "stop":
@@ -204,6 +209,7 @@ namespace KinectControl.UI
                             ScreenManager.Kinect.devices[0].switchOff(ScreenManager.Kinect.comm);
                         else
                             ScreenManager.Kinect.devices[0].switchOn(ScreenManager.Kinect.comm);
+                        screenManager.AddScreen(new PauseScreen(ScreenManager.Kinect.devices[0].Name +" is "+ScreenManager.Kinect.devices[0].Status,300));
                         voiceCommands.HeardString = "";
                         break;
                     case "device two":
@@ -211,8 +217,17 @@ namespace KinectControl.UI
                             ScreenManager.Kinect.devices[1].switchOff(ScreenManager.Kinect.comm);
                         else
                             ScreenManager.Kinect.devices[1].switchOn(ScreenManager.Kinect.comm);
+                        screenManager.AddScreen(new PauseScreen(ScreenManager.Kinect.devices[1].Name + " is " + ScreenManager.Kinect.devices[1].Status,300));
                         voiceCommands.HeardString = "";
                         break;
+                    //case "volume up":
+                    //    MediaPlayer.Volume++;
+                    //    voiceCommands.HeardString="";
+                    //    break;
+                    //case "volume down":
+                    //    MediaPlayer.Volume--;
+                    //    voiceCommands.HeardString = "";
+                    //    break;
                     default: break;
                 }
             }
@@ -236,10 +251,9 @@ namespace KinectControl.UI
                 userAvatar.Draw(gameTime);
             spriteBatch.Begin();
             if(voiceCommands!=null && !voiceCommands.HeardString.Equals(""))
-            spriteBatch.DrawString(font,"voice recognized :" + voiceCommands.HeardString, new Vector2(300,300), Color.Orange);
+            spriteBatch.DrawString(font,"voice recognized: " + voiceCommands.HeardString, new Vector2(300,300), Color.Orange);
             spriteBatch.End();
         }
-
         public void FreezeScreen()
         {
             screenState = ScreenState.Frozen;

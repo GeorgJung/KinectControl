@@ -8,14 +8,29 @@ namespace KinectControl.Common
     public class Device
     {
         private string name;
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
         private bool isSwitchedOn;
         public bool IsSwitchedOn
         {
             get { return isSwitchedOn; }
             set { isSwitchedOn = value; }
         }
+        public string Status
+        {
+            get { if (isSwitchedOn) return "switched on"; else return "switched off"; }
+            set { Status = value; }
+        }
         private string switchOnSignal;
         private string switchOffSignal;
+        public string SwitchOffSignal
+        {
+            get { return switchOffSignal; }
+            set { }
+        }
 
         public Device()
         {
@@ -42,7 +57,7 @@ namespace KinectControl.Common
         {
             comm.OpenPort();
             comm.WriteData(switchOnSignal);
-            comm.ClosePort();
+            //comm.ClosePort();
             isSwitchedOn = true;
         }
         public void switchOff(CommunicationManager comm)
@@ -50,7 +65,7 @@ namespace KinectControl.Common
             comm.OpenPort();
             comm.WriteData(switchOffSignal);
             isSwitchedOn = false;
-            comm.ClosePort();
+            //inicomm.ClosePort();
         }
     }
 }
