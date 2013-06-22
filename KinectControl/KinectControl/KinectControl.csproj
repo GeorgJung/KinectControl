@@ -115,7 +115,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\ClapGesture.cs" />
+    <Compile Include="Common\JoinedHandsGesture.cs" />
     <Compile Include="Common\CommunicationManager.cs" />
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\Device.cs" />

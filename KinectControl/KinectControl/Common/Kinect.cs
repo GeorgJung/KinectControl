@@ -231,16 +231,16 @@ namespace KinectControl.Common
             waveLeftSegments[4] = waveLeftSegment1;
             waveLeftSegments[5] = waveLeftSegment2;
             this.gestureController.AddGesture(GestureType.WaveLeft, waveLeftSegments);
-            IRelativeGestureSegment[] clapSegments = new IRelativeGestureSegment[20];
-            ClapSegment1 clapSegment = new ClapSegment1();
+            IRelativeGestureSegment[] JoinedHandsSegments = new IRelativeGestureSegment[20];
+            JoinedHandsSegment1 JoinedHandsSegment = new JoinedHandsSegment1();
             for (int i = 0; i < 20; i++)
             {
                 // gesture consists of the same thing 10 times 
-                clapSegments[i] = clapSegment;
+                JoinedHandsSegments[i] = JoinedHandsSegment;
             }
-            //ClapSegment2 clapSegment2 = new ClapSegment2();
-            //clapSegments[20] = clapSegment2;
-            this.gestureController.AddGesture(GestureType.JoinedHands, clapSegments);
+            //JoinedHandsSegment2 JoinedHandsSegment2 = new JoinedHandsSegment2();
+            //JoinedHandsSegments[20] = JoinedHandsSegment2;
+            this.gestureController.AddGesture(GestureType.JoinedHands, JoinedHandsSegments);
 
             IRelativeGestureSegment[] swipeUpSegments = new IRelativeGestureSegment[3];
             swipeUpSegments[0] = new SwipeUpSegment1();
