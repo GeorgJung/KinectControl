@@ -41,7 +41,7 @@ namespace KinectControl.Common
 
         public void WriteData(string msg)
         {
-            if (!_portName.Equals(""))
+            if (!((_portName.Equals(""))||(_portName.Equals("COM0"))))
             {
                 if (!(port1.IsOpen == true)) 
                 port1.Open();

@@ -253,7 +253,7 @@ namespace KinectControl.UI
                 userAvatar.Draw(gameTime);
             spriteBatch.Begin();
             if(voiceCommands!=null && !voiceCommands.HeardString.Equals(""))
-            spriteBatch.DrawString(font,"voice recognized: " + voiceCommands.HeardString, new Vector2(300,300), Color.Orange);
+            spriteBatch.DrawString(font,"voice command recognized: " + voiceCommands.HeardString, new Vector2(300,300), Color.Orange);
             spriteBatch.End();
         }
         public void FreezeScreen()

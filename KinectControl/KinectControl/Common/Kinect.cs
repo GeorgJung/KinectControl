@@ -206,7 +206,13 @@ namespace KinectControl.Common
                     if(devices[1].IsSwitchedOn)
                     devices[1].switchOff(comm);
                     break;
-                case GestureType.Clap:
+                case GestureType.SwipeLeft:
+                    Gesture = "SwipeLeft";
+                    break;
+                case GestureType.SwipeRight:
+                    Gesture = "SwipeRight";
+                    break;
+                case GestureType.JoinedHands:
                     Gesture = "JoinedHands";
                     break;
             }
@@ -234,7 +240,7 @@ namespace KinectControl.Common
             }
             //ClapSegment2 clapSegment2 = new ClapSegment2();
             //clapSegments[20] = clapSegment2;
-            this.gestureController.AddGesture(GestureType.Clap, clapSegments);
+            this.gestureController.AddGesture(GestureType.JoinedHands, clapSegments);
 
             IRelativeGestureSegment[] swipeUpSegments = new IRelativeGestureSegment[3];
             swipeUpSegments[0] = new SwipeUpSegment1();
@@ -247,6 +253,18 @@ namespace KinectControl.Common
             swipeDownSegments[1] = new SwipeDownSegment2();
             swipeDownSegments[2] = new SwipeDownSegment3();
             gestureController.AddGesture(GestureType.SwipeDown, swipeDownSegments);
+
+            IRelativeGestureSegment[] swipeLeftSegments = new IRelativeGestureSegment[3];
+            swipeLeftSegments[0] = new SwipeLeftSegment1();
+            swipeLeftSegments[1] = new SwipeLeftSegment2();
+            swipeLeftSegments[2] = new SwipeLeftSegment3();
+            gestureController.AddGesture(GestureType.SwipeLeft, swipeLeftSegments);
+
+            IRelativeGestureSegment[] swipeRightSegments = new IRelativeGestureSegment[3];
+            swipeRightSegments[0] = new SwipeRightSegment1();
+            swipeRightSegments[1] = new SwipeRightSegment2();
+            swipeRightSegments[2] = new SwipeRightSegment3();
+            gestureController.AddGesture(GestureType.SwipeRight, swipeRightSegments);
             //IRelativeGestureSegment[] raiseHandSegments = new IRelativeGestureSegment[2];
             //RaiseHandSegment1 raiseHandSegment1 = new RaiseHandSegment1();
             //RaiseHandSegment2 raiseHandSegment2 = new RaiseHandSegment2();

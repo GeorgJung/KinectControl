@@ -53,7 +53,6 @@ C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Co
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\cursor2.xnb
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\D.xnb
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\E.xnb
-C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\exit.xnb
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\F.xnb
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\G.xnb
 C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\H.xnb

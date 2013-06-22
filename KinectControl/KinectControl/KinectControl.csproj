@@ -128,6 +128,8 @@
     <Compile Include="Common\Kinect.cs" />
     <Compile Include="Common\MyExtension.cs" />
     <Compile Include="Common\SwipeDownGesture.cs" />
+    <Compile Include="Common\SwipeLeftGesture.cs" />
+    <Compile Include="Common\SwipeRightGesture.cs" />
     <Compile Include="Common\SwipeUpGesture.cs" />
     <Compile Include="Common\VoiceCommands.cs" />
     <Compile Include="Common\WaveGesture.cs" />

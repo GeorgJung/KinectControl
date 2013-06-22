@@ -8,7 +8,6 @@ Content\Buttons\C.xnb
 Content\Buttons\cursor2.xnb
 Content\Buttons\D.xnb
 Content\Buttons\E.xnb
-Content\Buttons\exit.xnb
 Content\Buttons\F.xnb
 Content\Buttons\G.xnb
 Content\Buttons\H.xnb

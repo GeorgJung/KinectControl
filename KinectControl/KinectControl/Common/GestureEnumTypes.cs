@@ -31,7 +31,9 @@ namespace KinectControl.Common
         WaveLeft,
         SwipeUp,
         SwipeDown,
+        SwipeLeft,
+        SwipeRight,
         RaiseHand,
-        Clap,
+        JoinedHands,
     }
 }

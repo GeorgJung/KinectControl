@@ -92,15 +92,6 @@
       <Time>2013-03-17T18:19:55.0956529+02:00</Time>
     </Item>
     <Item>
-      <Source>Buttons\exit.png</Source>
-      <Name>Buttons\exit</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user\Desktop\KinectControl\KinectControl\KinectControl\bin\x86\Debug\Content\Buttons\exit.xnb</Output>
-      <Time>2013-03-17T18:19:55.0956529+02:00</Time>
-    </Item>
-    <Item>
       <Source>Buttons\F.png</Source>
       <Name>Buttons\F</Name>
       <Importer>TextureImporter</Importer>
