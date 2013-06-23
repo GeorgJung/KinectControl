@@ -79,7 +79,13 @@ namespace KinectControl.Common
             while (this.nui == null && index < KinectSensor.KinectSensors.Count)
             {
                 this.nui = KinectSensor.KinectSensors[index];
-                this.nui.Start();
+                try
+                {
+                    this.nui.Start();
+                }
+                catch(Exception)
+                {
+                }
             }
             try
             {
