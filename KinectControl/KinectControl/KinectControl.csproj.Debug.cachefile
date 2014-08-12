@@ -8,7 +8,6 @@ Content\Buttons\C.xnb
 Content\Buttons\cursor2.xnb
 Content\Buttons\D.xnb
 Content\Buttons\E.xnb
-Content\Buttons\exit.xnb
 Content\Buttons\F.xnb
 Content\Buttons\G.xnb
 Content\Buttons\H.xnb
@@ -36,13 +35,12 @@ Content\Textures\black.xnb
 Content\Textures\GUC.xnb
 Content\Textures\cursor2.xnb
 Content\Textures\gradientTexture.xnb
+Content\Textures\gradient.xnb
 Content\SpriteFont1.xnb
+Content\Fontopo.xnb
 Content\Audio\Skepta - Cradle To Da Grave.xnb
 Content\Audio\song.xnb
 Content\Audio\song2.xnb
-Content\Textures\gradient.xnb
-Content\Fontopo.xnb
-Content\Buttons\exit_button.xnb
 Content\Audio\Skepta - Cradle To Da Grave.wma
 Content\Audio\song.wma
 Content\Audio\song2.wma
